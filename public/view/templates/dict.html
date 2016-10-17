@@ -1,0 +1,45 @@
+<div class="container-fluid">
+	<div class="row content">
+		<div class="col-sm-3">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search...">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<span class="glyphicon glyphicon-search"></span>
+				</button>
+				</span>
+			</div>
+			<ul class="nav nav-pills nav-stacked  items-list">
+				{{#each html}}
+				<li><a href="#">{{title}}</a></li>
+				{{/each}}
+			</ul>
+			<div class="row">
+				<div class="add-menu">
+					<a href="#" class="btn btn-primary col-md-3">Add</a>
+					<a href="#" class="btn btn-danger col-md-3">Delete</a>
+					<a href="#" class="btn btn-success col-md-3">Edit</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-9">
+			<div class="row">
+				<label rows="2">Title</label>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<textarea class="form-control" rows="5" id="comment"></textarea>
+					</div>
+				</div>
+				<div class="col-md-6">
+					sadasas
+				</div>
+			</div>
+			<div class="row">
+					adsdasds
+			</div>
+		</div>
+	</div>
+</div>

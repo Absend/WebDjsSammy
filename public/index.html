@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>WebMeJS</title>
 	<link rel="icon" href="./assets/images/icon-36x36.png">
-	<link rel="stylesheet" href="./assets/main.css">
+	<link rel="stylesheet" href="./assets/styles/main.css">
 	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
 
@@ -13,19 +13,120 @@
 	<!-- Page -->
 	<div id="wrapper">
 		<header>
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-inverse navbar-static-top">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<a class="navbar-brand" href="#">
-							<img alt="Brand" src="./assets/images/icon-36x36.png">
-							<a id="main-title" class="navbar-brand" href="#">WebMeJS</a>
+							<img id="brand" alt="Brand" src="./assets/images/icon-36x36.png">
+							<a id="main-title" class="navbar-brand">WebMeJS&nbsp;&nbsp;&nbsp;</a>
 						</a>
+						<button class="btn btn-success navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="navbar-collapse navHeaderCollapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="nav">
+								<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Log In</a>
+								<div class="dropdown-menu">
+									<div class="log-in-form">
+										<div class="log-form">
+											<h1>Log In</h1><hr>
+											<div class="form-group">
+												<label for="tb-username">Username: </label>
+												<div class="input-group">
+													<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+												<input id="tb-username" type="text" class="form-control">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="tb-passworn">Password: </label>
+												<div class="input-group">
+													<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+												<input id="tb-password" type="password" class="form-control">
+												</div>
+											</div>
+											<button class="btn btn-success" id="btn-login" >Log In</button>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="nav">
+								<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Register</a>
+								<div class="dropdown-menu">
+									<div class="register-form">
+										<div class="log-form">
+											<h1>Register</h1><hr>
+											<div class="form-group">
+												<label for="tb-username glyphicon glyphicon-user">Username: </label>
+												<div class="input-group">
+													<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+												<input id="tb-username" type="text" class="form-control">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="tb-passworn">Password: </label>
+												<div class="input-group">
+													<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+												<input id="tb-password" type="password" class="form-control">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="tb-passworn-confirm">Confirm Password: </label>
+												<div class="input-group">
+													<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+												<input id="tb-password-confirm" type="password" class="form-control">
+												</div>
+											</div>
+											<button class="btn btn-primary" id="btn-register" >Sign Up</button>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-center">
+							<li class="nav dropdown">
+								<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">UI</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">HTML</a></li>
+									<li><a href="#">CSS</a></li><hr>
+									<li><a href="#">LESS</a></li>
+									<li><a href="#">SASS</a></li>
+									<li><a href="#">Stylus</a></li><hr>
+									<li><a href="#">Bootstrap</a></li><hr>
+								</ul>
+							</li>
+							<li class="nav dropdown">
+								<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Browser</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Angular</a></li><hr>
+									<li><a href="#">TypeScript</a></li><hr>
+								</ul>
+							</li>
+							<li class="nav dropdown">
+								<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Server</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Node.js</a></li><hr>
+									<li><a href="#">Express</a></li><hr>
+								</ul>
+							</li>
+							<li class="nav dropdown">
+								<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">DB</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">MongoDB</a></li><hr>
+									<li><a href="#">Mongoose</a></li><hr>
+								</ul>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</nav>
 		</header>
 		<main>
-			<div id="content"></div>
+			<div id="content">
+			</div>
 		</main>
 		<footer>
 			<p>copywrite&#169;2016</p>

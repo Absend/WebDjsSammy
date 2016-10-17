@@ -1,0 +1,61 @@
+#wrapper {
+    background-color: whitesmoke;
+}
+
+#main-title {
+    color: whitesmoke;
+    font-size: 1.7em;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
+}
+
+ul {
+    list-style-type: none;
+}
+
+.btn {
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.log-in-form, .register-form {
+    min-width: 450px;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    margin: 2px
+}
+
+.log-form {
+    margin: 2px
+}
+
+main {
+    background-color: whitesmoke;
+    min-height: 635px
+}
+
+.items-list{
+    min-height: 550px;
+    max-height: 550px;
+    border: 2px solid gray;
+    margin-top: 2px;
+    font-size: 18px;
+    overflow: scroll;
+}
+
+.add-menu{
+    margin-top: 2%;
+    margin-left: 5%
+}
+
+footer {
+    min-height: 50px;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 18px;
+    text-align: center
+}
+
+#dict-container {
+    border-bottom: 2px solid black;
+    min-height: 630px
+}

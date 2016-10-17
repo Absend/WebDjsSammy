@@ -8,7 +8,7 @@ import {
     let sammyApp = Sammy("#content", function () {
 
         this.get("#/", function () {
-            control.initial("#content");
+            control.html("#content");
         });
 
         this.get("#/main", (context) => {

@@ -14,28 +14,17 @@ class Control {
     }
 
     initial(selector) {
-        return view.pageInitial(selector);
-    }
-
-    post(obj) {
-        return data.add(obj);
-    }
-
-    people(selector) {
         this.data
             .then(function (value) {
-                let data = value.db[0];
-                console.log(data + " people loaded");
-                return view.pagePeople(selector, data);
+                return view.dict(selector);
             });
     }
 
-    cats(selector) {
+    html(selector) {
         this.data
             .then(function (value) {
-                let data = value.db[1];
-                console.log(data);
-                return view.pageCats(selector, data);
+                let data = value.db[0];
+                return view.dict(selector, data);
             });
     }
 }

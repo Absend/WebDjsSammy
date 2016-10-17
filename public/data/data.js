@@ -26,17 +26,6 @@ class Data {
     getAll() {
         return requester(this.url);
     }
-
-    add(data) {
-        adder(this.url, data).then((res, err) => {
-            (res) => {
-                console.log(res + "OK");
-            }
-            (err) => {
-                console.log(err);
-            }
-        });
-    }
 }
 
 let data = new Data();

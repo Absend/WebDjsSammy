@@ -15,16 +15,8 @@ function loadTemplate(selector, templateName, data) {
 }
 
 class View {
-    pageInitial(selector) {
-        loadTemplate(selector, "initial");
-    }
-
-    pagePeople(selector, data) {
-        loadTemplate(selector, "people", data);
-    }
-
-    pageCats(selector, data) {
-        loadTemplate(selector, "cats", data);
+    dict(selector, data) {
+        loadTemplate(selector, "dict", data);
     }
 }
 

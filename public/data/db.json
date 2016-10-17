@@ -1,50 +1,22 @@
 {
     "db": [
         {
-            "people": [
+            "html": [
                 {
-                    "name": "John",
-                    "age": "15",
-                    "sex": "male"
+                    "title": "<div>",
+                    "description": "1ththttth5"
                 },
                 {
-                    "name": "Debbie",
-                    "age": "36",
-                    "sex": "female"
+                    "title": "<hr>",
+                    "description": "afssa"
                 },
                 {
-                    "name": "Rambo",
-                    "age": "25",
-                    "sex": "male"
+                    "title": "<p>",
+                    "description": "bvbfv"
                 },
                 {
-                    "name": "Maria",
-                    "age": "58",
-                    "sex": "female"
-                }
-            ]
-        },
-        {
-            "cats": [
-                {
-                    "name": "Leo",
-                    "color": "white",
-                    "sex": "male"
-                },
-                {
-                    "name": "Dana",
-                    "color": "red",
-                    "sex": "female"
-                },
-                {
-                    "name": "Rado",
-                    "color": "blue",
-                    "sex": "male"
-                },
-                {
-                    "name": "Mimi",
-                    "color": "pink",
-                    "sex": "female"
+                    "title": "<header>",
+                    "description": "hhhnn"
                 }
             ]
         }
