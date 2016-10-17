@@ -33,7 +33,7 @@ main {
     min-height: 635px
 }
 
-.items-list{
+.items-list {
     min-height: 550px;
     max-height: 550px;
     border: 2px solid gray;
@@ -42,9 +42,27 @@ main {
     overflow: scroll;
 }
 
-.add-menu{
+.add-menu {
     margin-top: 2%;
     margin-left: 5%
+}
+
+#title {
+    min-height: 28px
+}
+
+.text {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 460px;
+    max-height: 460px;
+}
+
+.links {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 123px;
+    max-height: 123px;
 }
 
 footer {
@@ -52,7 +70,12 @@ footer {
     background-color: black;
     color: whitesmoke;
     font-size: 18px;
-    text-align: center
+    text-align: center;
+    padding: 2px
+}
+
+#copyright {
+    margin-top: 15px
 }
 
 #dict-container {

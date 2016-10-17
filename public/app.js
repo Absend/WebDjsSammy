@@ -8,7 +8,6 @@ import {
     let sammyApp = Sammy("#content", function () {
 
         this.get("#/", function () {
-            control.html("#content");
         });
 
         this.get("#/main", (context) => {
@@ -18,11 +17,11 @@ import {
             return control.post(newData);
         });
 
-        this.get("#/people", (context) => {
-            control.people("#content");
+        this.get("#/html", (context) => {
+            control.html("#content");
         });
 
-        this.get("#/cats", (context) => {
+        this.get("#/css", (context) => {
             control.cats("#content");
         });
     });
