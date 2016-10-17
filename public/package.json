@@ -1,0 +1,26 @@
+{
+  "name": "web-me-js",
+  "version": "1.0.0",
+  "description": "SPA app for JS development",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Absend/WebMeJS.git"
+  },
+  "keywords": [
+    "spa"
+  ],
+  "author": "Absend",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Absend/WebMeJS/issues"
+  },
+  "homepage": "https://github.com/Absend/WebMeJS#readme",
+  "dependencies": {
+    "systemjs": "^0.19.39",
+    "systemjs-plugin-babel": "0.0.16"
+  }
+}

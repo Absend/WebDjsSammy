@@ -1,0 +1,52 @@
+{
+    "db": [
+        {
+            "people": [
+                {
+                    "name": "John",
+                    "age": "15",
+                    "sex": "male"
+                },
+                {
+                    "name": "Debbie",
+                    "age": "36",
+                    "sex": "female"
+                },
+                {
+                    "name": "Rambo",
+                    "age": "25",
+                    "sex": "male"
+                },
+                {
+                    "name": "Maria",
+                    "age": "58",
+                    "sex": "female"
+                }
+            ]
+        },
+        {
+            "cats": [
+                {
+                    "name": "Leo",
+                    "color": "white",
+                    "sex": "male"
+                },
+                {
+                    "name": "Dana",
+                    "color": "red",
+                    "sex": "female"
+                },
+                {
+                    "name": "Rado",
+                    "color": "blue",
+                    "sex": "male"
+                },
+                {
+                    "name": "Mimi",
+                    "color": "pink",
+                    "sex": "female"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>WebMeJS</title>
+	<link rel="icon" href="./assets/images/icon-36x36.png">
+	<link rel="stylesheet" href="./assets/main.css">
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+	<!-- Page -->
+	<div id="wrapper">
+		<header>
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<img alt="Brand" src="./assets/images/icon-36x36.png">
+							<a id="main-title" class="navbar-brand" href="#">WebMeJS</a>
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div id="content"></div>
+		</main>
+		<footer>
+			<p>copywrite&#169;2016</p>
+		</footer>
+	</div>
+
+	<!-- Libs -->
+	<script src="./bower_components/jquery/dist/jquery.js"></script>
+	<script src="./bower_components/handlebars/handlebars.js"></script>
+	<script src="./bower_components/sammy/lib/sammy.js"></script>
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+	<script src="./node_modules/systemjs/dist/system.js"></script>
+
+	<!-- System config -->
+	<script>
+        (function () {
+            SystemJS.config({
+                transpiler: "plugin-babel",
+                map:{
+                    "plugin-babel": "./node_modules/systemjs-plugin-babel/plugin-babel.js",
+                    "systemjs-babel-build": "./node_modules/systemjs-plugin-babel/systemjs-babel-browser.js",
+                    "main": "./app.js"
+                }
+            });
+            System.import("main");
+        })();
+    </script>
+</body>
+
+</html>
