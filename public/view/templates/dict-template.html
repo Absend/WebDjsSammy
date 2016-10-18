@@ -1,7 +1,7 @@
 <div class="container-fluid">
 	<div class="row content">
 		<div class="col-sm-3">
-			<div class="input-group">
+			<div class="input-group search">
 				<input type="text" class="form-control" placeholder="Search...">
 				<span class="input-group-btn">
 					<button class="btn btn-default" type="button">
@@ -9,10 +9,7 @@
 				</button>
 				</span>
 			</div>
-			<ul class="nav nav-pills nav-stacked  items-list">
-				{{#each html}}
-				<li><a href="#">{{title}}</a></li>
-				{{/each}}
+			<ul id="terms" class="nav nav-pills nav-stacked  items-list">
 			</ul>
 			<div class="row">
 				<div class="add-menu">
@@ -20,24 +17,26 @@
 					<a href="#" class="btn btn-danger col-md-3">Delete</a>
 					<a href="#" class="btn btn-success col-md-3">Edit</a>
 				</div>
-			</div>
+			</div><hr>
 		</div>
 
 		<div class="col-sm-9">
 			<div id="title">
-				<p>Title</p>
+				<div id="title-value">
+					<p id="term-name"></p>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-6">
-					<textarea class="text"></textarea>
+					<textarea id="term-definition" class="text"></textarea>
 				</div>
 				<div class="col-md-6">
-					<textarea class="text"></textarea>
+					<textarea id="term-examples" class="text"></textarea>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<textarea class="links"></textarea>
+					<textarea id="term-more" class="links"></textarea>
 				</div>
 			</div>
 		</div>

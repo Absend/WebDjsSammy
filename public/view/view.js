@@ -15,8 +15,16 @@ function loadTemplate(selector, templateName, data) {
 }
 
 class View {
-    dict(selector, data) {
-        loadTemplate(selector, "dict", data);
+    dict(selector) {
+        loadTemplate(selector, "dict-template");
+    }
+
+    nav(selector) {
+        loadTemplate(selector, "nav-template");
+    }
+
+    html(selector, data){
+        loadTemplate(selector, "html-template", data);
     }
 }
 

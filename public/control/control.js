@@ -13,18 +13,19 @@ class Control {
         this.data = data.getAll()
     }
 
-    initial(selector) {
-        this.data
-            .then(function (value) {
-                return view.dict(selector);
-            });
+    nav(selector) {
+        return view.nav(selector);
+    }
+
+    dict(selector) {
+        return view.dict(selector);
     }
 
     html(selector) {
         this.data
             .then(function (value) {
                 let data = value.db[0];
-                return view.dict(selector, data);
+                return view.html(selector, data);
             });
     }
 }

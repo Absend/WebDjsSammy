@@ -2,10 +2,14 @@
     background-color: whitesmoke;
 }
 
-#main-title {
+#main-logo-name {
     color: whitesmoke;
     font-size: 1.7em;
     font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
+}
+
+a{
+    font-size: 16px
 }
 
 ul {
@@ -33,11 +37,16 @@ main {
     min-height: 635px
 }
 
+.search{
+    margin-top: -9px
+}
+
 .items-list {
     min-height: 550px;
     max-height: 550px;
-    border: 2px solid gray;
-    margin-top: 2px;
+    border: 1px solid darkgrey;
+    background-color: ghostwhite;
+    margin-top: 11px;
     font-size: 18px;
     overflow: scroll;
 }
@@ -48,34 +57,44 @@ main {
 }
 
 #title {
-    min-height: 28px
+    max-height: 45px;
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: left;
+    color: steelblue;
+    margin-top: -18px
+}
+
+#title-value{
+    margin-top: 5px
 }
 
 .text {
     min-width: 100%;
     max-width: 100%;
-    min-height: 460px;
-    max-height: 460px;
+    min-height: 500px;
+    max-height: 500px;
 }
 
 .links {
     min-width: 100%;
     max-width: 100%;
-    min-height: 123px;
-    max-height: 123px;
+    min-height: 132px;
+    max-height: 132px;
 }
 
 footer {
-    min-height: 50px;
+    min-height: 20px;
     background-color: black;
     color: whitesmoke;
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
-    padding: 2px
+    padding: 2px;
+    margin-top: -20px
 }
 
 #copyright {
-    margin-top: 15px
+    margin-top: 17px
 }
 
 #dict-container {

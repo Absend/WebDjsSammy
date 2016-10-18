@@ -5,24 +5,19 @@ import {
 } from "./control/control.js";
 
 (function () {
-    let sammyApp = Sammy("#content", function () {
+    let sammyApp = Sammy(function () {
 
         this.get("#/", function () {
+            this.redirect('#/main');
         });
 
-        this.get("#/main", (context) => {
-            let newData = {
-                "massage": "Wellcome to simple SPA example!"
-            }
-            return control.post(newData);
+        this.get("#/main", function () {
+            control.nav("#header");
+            control.dict("#content");
         });
 
         this.get("#/html", (context) => {
-            control.html("#content");
-        });
-
-        this.get("#/css", (context) => {
-            control.cats("#content");
+            control.html("#terms");
         });
     });
 
