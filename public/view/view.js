@@ -15,16 +15,29 @@ function loadTemplate(selector, templateName, data) {
 }
 
 class View {
-    dict(selector) {
-        loadTemplate(selector, "dict-template");
-    }
 
     nav(selector) {
         loadTemplate(selector, "nav-template");
     }
 
+    // login(selector){
+    //     loadTemplate(selector, "login-template");
+    // }
+
+    // signup(selector){
+    //     loadTemplate(selector, "signup-template");
+    // }
+
+    dict(selector) {
+        loadTemplate(selector, "dict-template");
+    }
+
     html(selector, data){
         loadTemplate(selector, "html-template", data);
+    }
+
+    css(selector, data){
+        loadTemplate(selector, "css-template", data);
     }
 }
 

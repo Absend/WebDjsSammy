@@ -1,6 +1,6 @@
 "use strict";
 
-function requester(url) {
+function getJSON(url) {
     return new Promise((resolve, reject) => {
         $.getJSON(url, (data) => {
             resolve(data);
@@ -8,23 +8,32 @@ function requester(url) {
     });
 }
 
-function adder(url, data) {
-    data = JSON.stringify(data);
-    
+function setJSON(url, data) {
     return new Promise((resolve, reject) => {
-        $.post(url, data, function (res) {
-            resolve(res);
+        data = JSON.stringify(data);
+        $.post(url, data, function (err) {
+            assert(err);
         }, "json");
     });
 }
+
+
 
 class Data {
     constructor() {
         this.url = "../data/db.json";
     }
 
+    signUp() {
+
+    }
+
+    logIn() {
+
+    }
+
     getAll() {
-        return requester(this.url);
+        return getJSON(this.url);
     }
 }
 
