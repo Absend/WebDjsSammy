@@ -1,15 +1,40 @@
-/* globals require, console */
-
 "use strict";
 
-let dbFactory = require("./db");
+import * as control from "./control/control.js";
 
-let dataService = require("./data")(dbFactory.getDb());
+(function () {
+    let sammyApp = Sammy(function () {
+        let $page = $("#page");
 
-const app = require("./config/express")(dataService);
+        this.get("#/", function () {
+            $("#content").html += "Loading...";
+            this.redirect("#/main");
+        });
 
-require("./routers")(app, dataService);
+        this.get("#/main", function () {
+            control.dictionaryCtrl.nav("#header");
+            control.dictionaryCtrl.dict("#content");
+            control.dictionaryCtrl.footer("#footer");
+        });
 
-let port = require("./config").port;
+        this.get("#/main/html", function () {
+            control.dictionaryCtrl.html("#terms");
+        });
 
-app.listen(port, () => console.log(`App running at http://localhost:${port}/`));
+        this.get("#/main/term", function () {
+            $(".term-value").on("click", function () {
+                let currentTerm = $(this).html();
+                $("#term-name").html(currentTerm);
+
+                // data-binding term.title -> term.definition
+                control.dictionaryCtrl.element(currentTerm).then((res) => {
+                    $("#term-definition").html(res);
+                });
+            });
+        });
+    });
+
+    $(function () {
+        sammyApp.run("#/");
+    });
+})();

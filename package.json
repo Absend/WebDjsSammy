@@ -1,5 +1,5 @@
 {
-  "name": "web-me-js",
+  "name": "web-djs",
   "version": "1.0.0",
   "description": "SPA app for JS development",
   "main": "app.js",
@@ -21,13 +21,7 @@
   },
   "homepage": "https://github.com/Absend/WebMeJS#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "bower": "^1.5.2",
-    "cors": "^2.8.1",
-    "express": "^4.14.0",
-    "express-list-routes": "^0.1.4",
-    "lodash": "^4.16.4",
-    "lowdb": "^0.13.1",
-    "underscore-db": "^0.12.0"
+    "systemjs": "^0.19.39",
+    "systemjs-plugin-babel": "0.0.16"
   }
 }

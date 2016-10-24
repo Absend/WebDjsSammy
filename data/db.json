@@ -1,0 +1,70 @@
+{
+    "db": [
+        {
+            "user": [
+                {
+                    "name": "Pesho",
+                    "id": "12345"
+                }
+            ],
+            "data": [
+                {
+                    "html": [
+                        {
+                            "title": "<div>",
+                            "description": "block-element",
+                            "examples": "",
+                            "links": ""
+                        },
+                        {
+                            "title": "<p>",
+                            "description": "sfsf-element",
+                            "examples": "",
+                            "links": ""
+                        },
+                        {
+                            "title": "<footer>",
+                            "description": "sf-element",
+                            "examples": "",
+                            "links": ""
+                        },
+                        {
+                            "title": "<header>",
+                            "description": "dgdff-element",
+                            "examples": "",
+                            "links": ""
+                        },
+                        {
+                            "title": "<p>",
+                            "description": "bdgvdk-element",
+                            "examples": "",
+                            "links": ""
+                        },
+                        {
+                            "title": "<img>",
+                            "description": "block-element",
+                            "examples": "",
+                            "links": ""
+                        },
+                        {
+                            "title": "<main>",
+                            "description": "block-element",
+                            "examples": "",
+                            "links": ""
+                        }
+                    ]
+                },
+                {
+                    "css": [
+                        {
+                            "title": "selectors",
+                            "description": "1ththttth5",
+                            "examples": "",
+                            "links": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

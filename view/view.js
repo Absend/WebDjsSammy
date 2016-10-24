@@ -1,6 +1,7 @@
 "use strict";
 
 function loadTemplate(selector, templateName, data) {
+    data = data || Object;
     let selectedItem = $(selector);
     let url = `./view/templates/${templateName}.html`;
 
@@ -20,13 +21,9 @@ class View {
         loadTemplate(selector, "nav-template");
     }
 
-    // login(selector){
-    //     loadTemplate(selector, "login-template");
-    // }
-
-    // signup(selector){
-    //     loadTemplate(selector, "signup-template");
-    // }
+    footer(selector) {
+        loadTemplate(selector, "footer-template");
+    }
 
     dict(selector) {
         loadTemplate(selector, "dict-template");
@@ -34,10 +31,6 @@ class View {
 
     html(selector, data){
         loadTemplate(selector, "html-template", data);
-    }
-
-    css(selector, data){
-        loadTemplate(selector, "css-template", data);
     }
 }
 
