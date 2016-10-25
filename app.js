@@ -28,7 +28,11 @@ import * as control from "./control/control.js";
 
                 // data-binding term.title -> term.definition
                 control.dictionaryCtrl.element(currentTerm).then((res) => {
-                    $("#term-definition").html(res);
+                    $("#term-definition").html(res[0]);
+                    console.log(res[0]);
+                    $("#term-examples").html(res[1]);
+                    $("#term-more").attr("href", res[2]);
+                    console.log(res[2]);
                 });
             });
         });

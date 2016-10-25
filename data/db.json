@@ -12,30 +12,30 @@
                     "html": [
                         {
                             "title": "<div>",
-                            "description": "block-element",
-                            "examples": "",
-                            "links": ""
+                            "description": " - division\n - block-element\n - used as a container \n\n full write: <div></div>",
+                            "examples": "&lt;div style=\"background-color: yellow\"&gt;Hi, there! &lt;/div&gt;<hr><div style=\"background-color: yellow\">Hi, there! </div>",
+                            "links": "http://www.w3schools.com/tags/tag_div.asp"
                         },
                         {
                             "title": "<p>",
-                            "description": "sfsf-element",
-                            "examples": "",
-                            "links": ""
+                            "description": " - paragraph of text\n - block-element\n\n full write: <p></p>",
+                            "examples": "&lt;p style=\"background-color: ghostwhite; color: black;\"&gt;Once upon a time... &lt;/p&gt;<hr><p style=\"background-color: ghostwhite; color: black;\">Once upon a time... </p>",
+                            "links": "http://www.w3schools.com/tags/tag_p.asp"
                         },
                         {
                             "title": "<footer>",
-                            "description": "sf-element",
+                            "description": "- block-element",
                             "examples": "",
                             "links": ""
                         },
                         {
                             "title": "<header>",
-                            "description": "dgdff-element",
+                            "description": "- block-element",
                             "examples": "",
                             "links": ""
                         },
                         {
-                            "title": "<p>",
+                            "title": "<nav>",
                             "description": "bdgvdk-element",
                             "examples": "",
                             "links": ""

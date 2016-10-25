@@ -38,13 +38,14 @@ class DictionaryCtrl {
             .then(function (res) {
                 let data = res.db[0].data[0].html;
                 let len = data.length;
-
+                console.log(currentTerm);
+                
                 currentTerm = currentTerm.substr(4, currentTerm.length - 8);
                 currentTerm = "<" + currentTerm + ">";
 
                 for (let i = 0; i < len; i += 1) {
                     if (data[i].title == currentTerm) {
-                        return data[i].description;
+                        return new Array(data[i].description, data[i].examples, data[i].links);
                     }
                 }
             });
