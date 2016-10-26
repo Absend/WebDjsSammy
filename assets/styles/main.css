@@ -111,3 +111,8 @@ footer {
     border-bottom: 2px solid black;
     min-height: 630px
 }
+
+.add-label {
+    margin-bottom: -13px;
+    color: steelblue;
+}
