@@ -8,15 +8,6 @@ function getJSON(url) {
     });
 }
 
-function setJSON(url, data) {
-    return new Promise((resolve, reject) => {
-        data = JSON.stringify(data);
-        $.post(url, data, function (err) {
-            assert(err);
-        }, "json");
-    });
-}
-
 class Data {
     constructor() {
         this.url = "../data/db.json";
@@ -24,10 +15,6 @@ class Data {
 
     getAll() {
         return getJSON(this.url);
-    }
-
-    saveAll(data){
-        setJSON(this.url, data);
     }
 }
 

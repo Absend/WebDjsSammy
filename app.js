@@ -1,24 +1,34 @@
 "use strict";
 
-import * as control from "./control/control.js";
+import {
+    userCtrl as userCtrl
+} from "./control/userCtrl.js";
+
+import {
+    dictionaryCtrl as dictionaryCtrl
+} from "./control/dataCtrl.js";
 
 (function () {
     let sammyApp = Sammy(function () {
-        let $page = $("#page");
 
         this.get("#/", function () {
-            $("#content").html += "Loading...";
             this.redirect("#/main");
         });
 
         this.get("#/main", function () {
-            control.dictionaryCtrl.nav("#header");
-            control.dictionaryCtrl.dict("#content");
-            control.dictionaryCtrl.footer("#footer");
+            dictionaryCtrl.nav("#header");
+            dictionaryCtrl.dict("#content");
+            dictionaryCtrl.footer("#footer");
         });
 
-        this.get("#/main/html", function () {
-            control.dictionaryCtrl.html("#terms");
+        this.get("#/main/register", userCtrl.register);
+
+        this.get("#/main/login", userCtrl.login);
+
+        this.get("#/main/logout", userCtrl.logout);
+
+        this.get("#/main/html", () => {
+            dictionaryCtrl.html("#terms");
         });
 
         this.get("#/main/term", function () {
@@ -26,14 +36,7 @@ import * as control from "./control/control.js";
                 let currentTerm = $(this).html();
                 $("#term-name").html(currentTerm);
 
-                // data-binding term.title -> term.definition
-                control.dictionaryCtrl.element(currentTerm).then((res) => {
-                    $("#term-definition").html(res[0]);
-                    console.log(res[0]);
-                    $("#term-examples").html(res[1]);
-                    $("#term-more").attr("href", res[2]);
-                    console.log(res[2]);
-                });
+                dictionaryCtrl.selectElement(currentTerm);
             });
         });
     });
@@ -41,4 +44,5 @@ import * as control from "./control/control.js";
     $(function () {
         sammyApp.run("#/");
     });
+
 })();

@@ -11,46 +11,70 @@
                 {
                     "html": [
                         {
+                            "title": "<body>",
+                            "description": " - body of the page\n - all visible content of the page",
+                            "examples": "&lt;body&gt;&lt;/body&gt;",
+                            "links": "http://www.w3schools.com/tags/tag_body.asp"
+                        },
+                        {
+                            "title": "<br>",
+                            "description": " - break line\n - inline-element\n - go to next line",
+                            "examples": "see &lt;p&gt; example",
+                            "links": "http://www.w3schools.com/tags/tag_br.asp"
+                        },
+                        {
                             "title": "<div>",
                             "description": " - division\n - block-element\n - used as a container \n\n full write: <div></div>",
                             "examples": "&lt;div style=\"background-color: yellow\"&gt;Hi, there! &lt;/div&gt;<hr><div style=\"background-color: yellow\">Hi, there! </div>",
                             "links": "http://www.w3schools.com/tags/tag_div.asp"
                         },
                         {
-                            "title": "<p>",
-                            "description": " - paragraph of text\n - block-element\n\n full write: <p></p>",
-                            "examples": "&lt;p style=\"background-color: ghostwhite; color: black;\"&gt;Once upon a time... &lt;/p&gt;<hr><p style=\"background-color: ghostwhite; color: black;\">Once upon a time... </p>",
-                            "links": "http://www.w3schools.com/tags/tag_p.asp"
+                            "title": "<footer>",
+                            "description": " - foot of the page body content\n - block-element\n - has semantic mean",
+                            "examples": "",
+                            "links": "http://www.w3schools.com/tags/tag_footer.asp"
                         },
                         {
-                            "title": "<footer>",
-                            "description": "- block-element",
-                            "examples": "",
-                            "links": ""
+                            "title": "<head>",
+                            "description": " - head of the page\n - all invisible content of the page",
+                            "examples": "&lt;head&gt;&lt;/head&gt;",
+                            "links": "http://www.w3schools.com/tags/tag_head.asp"
                         },
                         {
                             "title": "<header>",
-                            "description": "- block-element",
-                            "examples": "",
-                            "links": ""
+                            "description": " - head of the page body content\n - block-element\n - has semantic mean",
+                            "examples": "&lt;header&gt;",
+                            "links": "http://www.w3schools.com/tags/tag_header.asp"
                         },
                         {
-                            "title": "<nav>",
-                            "description": "bdgvdk-element",
-                            "examples": "",
-                            "links": ""
+                            "title": "<html>",
+                            "description": " - HyperText Markup Language\n - a web page",
+                            "examples": "&lt;html&gt;",
+                            "links": "http://www.w3schools.com/tags/tag_html.asp"
                         },
                         {
                             "title": "<img>",
-                            "description": "block-element",
+                            "description": " - image\n - inline-element",
                             "examples": "",
-                            "links": ""
+                            "links": "http://www.w3schools.com/tags/tag_img.asp"
                         },
                         {
                             "title": "<main>",
-                            "description": "block-element",
+                            "description": " - main content of the page body\n - block-element\n - has semantic mean",
                             "examples": "",
-                            "links": ""
+                            "links": "http://www.w3schools.com/tags/tag_main.asp"
+                        },
+                        {
+                            "title": "<nav>",
+                            "description": " - navigation\n - block-element\n - has semantic mean",
+                            "examples": "",
+                            "links": "http://www.w3schools.com/tags/tag_nav.asp"
+                        },
+                        {
+                            "title": "<p>",
+                            "description": " - paragraph of text\n - block-element\n - create new a line after itself\n\n full write: <p></p>",
+                            "examples": "&lt;p style=\"background-color: ghostwhite; color: black;\"&gt;Once upon a time... &lt;br&gt; She was so beautiful... &lt;/p&gt;<hr><div style=\"background-color: ghostwhite; color: black;\">Once upon a time... <br>She was so beautiful... </div>",
+                            "links": "http://www.w3schools.com/tags/tag_p.asp"
                         }
                     ]
                 },

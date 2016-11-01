@@ -1,16 +1,14 @@
 "use strict";
 
-function loadTemplate(selector, templateName, data) {
-    data = data || Object;
-    let selectedItem = $(selector);
-    let url = `./view/templates/${templateName}.html`;
+import {
+    templateCompiler as templateCompiler
+} from "../utils/templater.js";
 
-    return new Promise((resolve, reject) => {
-        $.get(url, (htmlTemplate) => {
-            let compiledTemplate = Handlebars.compile(htmlTemplate);
-            resolve(compiledTemplate);
-        });
-    }).then((compiledTemplate) => {
+function loadTemplate(selector, templateName, data) {
+    let selectedItem = $(selector);
+    data = data || Object;
+
+    return templateCompiler.compile(templateName).then((compiledTemplate) => {
         selectedItem.html(compiledTemplate(data));
     });
 }
@@ -29,7 +27,7 @@ class View {
         loadTemplate(selector, "dict-template");
     }
 
-    html(selector, data){
+    html(selector, data) {
         loadTemplate(selector, "html-template", data);
     }
 }

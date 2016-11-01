@@ -37,9 +37,13 @@ ul {
     margin: 2px
 }
 
-.langs{
+.langs {
     text-align: center;
     font-size: 20px;
+}
+
+.invisible {
+    display: none;
 }
 
 main {

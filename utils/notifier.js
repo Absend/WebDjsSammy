@@ -1,3 +1,5 @@
+"use strict";
+    
 let notifier = (function () {
 
     function success(msg){
