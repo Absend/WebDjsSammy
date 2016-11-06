@@ -17,21 +17,27 @@ import {
 } from "../utils/notifier.js";
 
 class UserCtrl {
-    register() {
+    register(context) {
         $("#btn-register").on("click", function () {
-            let username = $("#tb-username").val(),
-                password = $("#tb-password").val(),
-                passwordConfirm = $("#tb-password-confirm").val(),
-                passwordHash = CryptoJS.SHA1(password).toString();
-
+            let username = $("#tb-username").val();
             validator.validateUsername(username);
+
+            let password = $("#tb-password").val();
             validator.validatePassword(password);
 
+            let passwordConfirm = $("#tb-password-confirm").val();
+
             if (password === passwordConfirm) {
-                console.log(username);
-                console.log(password);
-                console.log(passwordHash);
-                notifier.success("Register success!");
+                let user = {
+                    username: username,
+                    password: CryptoJS.SHA1(password).toString()
+                };
+                
+                data.register(user);
+
+                if (true) {
+                    notifier.success("Register success!");
+                }
             } else {
                 notifier.error("Password does not match!");
             }
@@ -49,13 +55,17 @@ class UserCtrl {
         $("#btn-login").on("click", function () {
             let username = $("#tb-username-log").val(),
                 password = $("#tb-password-log").val();
+            $("#btn-profile").html(username);
 
-            console.log(username);
+            console.log(username);  
+
+            console.log(username)
             console.log(password);
 
             $("#login").addClass("invisible");
             $("#register").addClass("invisible");
             $("#logout").removeClass("invisible");
+            $("#profile").removeClass("invisible");
             $("#main-menu").removeClass("invisible");
         });
         //let userStore = JSON.parse(localStorage.getItem("userStorage"));
@@ -64,12 +74,13 @@ class UserCtrl {
     logout() {
         $("#btn-logout").on("click", function () {
             $("#logout").addClass("invisible");
+            $("#profile").addClass("invisible");
             $("#main-menu").addClass("invisible");
             $("#login").removeClass("invisible");
             $("#register").removeClass("invisible");
 
             console.log('logout');
-            
+
         });
     }
 }

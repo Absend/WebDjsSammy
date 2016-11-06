@@ -33,6 +33,7 @@ class DictionaryCtrl {
         this.data
             .then(function (res) {
                 let data = res.db[0].data[0];
+                $("#dictIt").removeClass("invisible");
                 return view.html(selector, data);
             });
     }

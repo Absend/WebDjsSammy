@@ -17,7 +17,7 @@ import {
 
         this.get("#/main", function () {
             dictionaryCtrl.nav("#header");
-            dictionaryCtrl.dict("#content");
+            //dictionaryCtrl.dict("#content");
             dictionaryCtrl.footer("#footer");
         });
 
@@ -38,6 +38,10 @@ import {
 
                 dictionaryCtrl.selectElement(currentTerm);
             });
+        });
+
+        this.get("#/dict", function(){
+            dictionaryCtrl.dict("#content");
         });
     });
 

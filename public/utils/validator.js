@@ -6,8 +6,8 @@ import {
 
 const constants = {
     username: {
-        minLength: 3,
-        maxLength: 20
+        minLength: 6,
+        maxLength: 30
     },
     password: {
         minLength: 6,
@@ -37,7 +37,7 @@ const validator = {
         }
 
         if (username.length < constants.username.minLength || username.length > constants.username.maxLength) {
-            notifier.error("Username must be between 3 and 20 characters!");
+            notifier.error("Username must be between 6 and 30 characters!");
         }
     },
     validatePassword: (pass) => {
