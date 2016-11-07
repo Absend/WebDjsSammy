@@ -6,7 +6,7 @@ import {
 
 import {
     view as view
-} from "../view/view.js";
+} from "../view/template-loader.js";
 
 import {
     validator as validator
@@ -25,6 +25,10 @@ class DictionaryCtrl {
         return view.footer(selector);
     }
 
+    main(selector){
+        return view.main(selector);
+    }
+
     dict(selector) {
         return view.dict(selector);
     }
@@ -33,7 +37,6 @@ class DictionaryCtrl {
         this.data
             .then(function (res) {
                 let data = res.db[0].data[0];
-                //$("#dictIt").removeClass("invisible");
                 return view.html(selector, data);
             });
     }
@@ -42,7 +45,6 @@ class DictionaryCtrl {
         this.data
             .then(function (res) {
                 let data = res.db[0].data[0];
-                $("#dictIt").removeClass("invisible");
                 return view.htmlTest(selector, data);
             });
     }

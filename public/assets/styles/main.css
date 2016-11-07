@@ -26,6 +26,10 @@ ul {
     margin-left: 3%;
 }
 
+.navBtn {
+    max-height: 35px
+}
+
 .log-in-form, .register-form {
     min-width: 550px;
     background-color: whitesmoke;

@@ -81,23 +81,34 @@
                         {
                             "question": "1. What does HTML stand for?",
                             "answers" :[
-                                "hg",
-                                "hfjh",
-                                "hgjh",
-                                "hgjh"
+                                "Hyperlinks and Text Markup Language",
+                                "Hyper Text Markup Language",
+                                "Home Tool Markup Language",
+                                "Hyperlinks Tool Markup Language "
                             ]
                         },
                         {
-                            "question": "2. What sre attribites?",
+                            "question": "2. What are attribites?",
                             "answers" :[
-                                "hgjh",
-                                "hgjgjh",
-                                "hgd",
-                                "hjh"
+                                "Properties of the HTML Elements",
+                                "The smallest piece of HTML",
+                                "Combination of opening  and closing tags"
                             ]
                         },
                         {
-                            "question": "3. What sre attribites?",
+                            "question": "3. The value of the attributes is surrounded by: ",
+                            "answers" :[
+                                ";",
+                                "“ ” or ‘ ’",
+                                "\" \" or ``",
+                                "“ ’ or ‘ ”",
+                                "“ ‘",
+                                "\" \" or ' '",
+                                "\" ” or ' '"
+                            ]
+                        },
+                        {
+                            "question": "4. Which of the following tags is used for the largest heading?",
                             "answers" :[
                                 "hghjgdfjh",
                                 "hghdfjgjh",
@@ -106,16 +117,7 @@
                             ]
                         },
                         {
-                            "question": "4. What sre attribites?",
-                            "answers" :[
-                                "hghjgdfjh",
-                                "hghdfjgjh",
-                                "hgdfhjgjh",
-                                "hghjfgjh"
-                            ]
-                        },
-                        {
-                            "question": "5. What sre attribites?",
+                            "question": "5. Which of the following tags is used  for inserting a line break?",
                             "answers" :[
                                 "hghjgdfjh",
                                 "hghdfjgjh",

@@ -6,7 +6,7 @@ import {
 
 import {
     view as view
-} from "../view/view.js";
+} from "../view/template-loader.js";
 
 import {
     validator as validator
@@ -17,7 +17,7 @@ import {
 } from "../utils/notifier.js";
 
 class UserCtrl {
-    register(context) {
+    register() {
         $("#btn-register").on("click", function () {
             let username = $("#tb-username").val();
             let password = $("#tb-password").val();

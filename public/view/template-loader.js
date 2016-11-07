@@ -23,6 +23,10 @@ class View {
         loadTemplate(selector, "footer-template");
     }
 
+    main(selector) {
+        loadTemplate(selector, "main-template");
+    }
+
     dict(selector) {
         loadTemplate(selector, "dict-template");
     }

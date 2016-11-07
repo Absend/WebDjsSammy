@@ -17,7 +17,7 @@ import {
 
         this.get("#/main", function () {
             dictionaryCtrl.nav("#header");
-            //dictionaryCtrl.dict("#content");
+            dictionaryCtrl.main("#content");
             dictionaryCtrl.footer("#footer");
         });
 
@@ -25,10 +25,22 @@ import {
 
         this.get("#/main/login", userCtrl.login);
 
-        this.get("#/main/logout", userCtrl.logout);
+        this.get("#/main/logout", () => {
+            dictionaryCtrl.main("#content");
+            userCtrl.logout
+        });
 
         this.get("#/main/html", () => {
-            dictionaryCtrl.htmlTest("#content");
+            $("#test").removeClass("invisible");
+            $("#tasks").removeClass("invisible");
+            $("#dictIt").removeClass("invisible");
+            
+            $("#test-btn").on("click", () => {
+                dictionaryCtrl.htmlTest("#content");
+            });
+            $("#taks-btn").on("click", () => {
+                dictionaryCtrl.html("#terms");
+            });
             $("#dict-btn").on("click", () => {
                 dictionaryCtrl.html("#terms");
             });
@@ -43,7 +55,7 @@ import {
             });
         });
 
-        this.get("#/dict", function(){
+        this.get("#/dict", function () {
             dictionaryCtrl.dict("#content");
         });
     });
