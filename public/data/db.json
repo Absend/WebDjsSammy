@@ -11,6 +11,24 @@
                 {
                     "html": [
                         {
+                            "title": "<article>",
+                            "description": " - part of a section\n - ...",
+                            "examples": "&lt;article&gt;&lt;/article&gt;",
+                            "links": "http://www.w3schools.com/tags/tag_article.asp"
+                        },
+                        {
+                            "title": "<aside>",
+                            "description": " - aside\n - ...",
+                            "examples": "&lt;aside&gt;&lt;/aside&gt;",
+                            "links": "http://www.w3schools.com/tags/tag_aside.asp"
+                        },
+                        {
+                            "title": "<audio>",
+                            "description": " - audio media\n - ...",
+                            "examples": "&lt;audio&gt;&lt;/audio&gt;",
+                            "links": "http://www.w3schools.com/tags/tag_audio.asp"
+                        },
+                        {
                             "title": "<body>",
                             "description": " - body of the page\n - all visible content of the page",
                             "examples": "&lt;body&gt;&lt;/body&gt;",
@@ -19,12 +37,24 @@
                         {
                             "title": "<br>",
                             "description": " - break line\n - inline-element\n - go to next line",
-                            "examples": "see &lt;p&gt; example",
+                            "examples": "see &lt;br&gt; example",
                             "links": "http://www.w3schools.com/tags/tag_br.asp"
                         },
                         {
+                            "title": "<canvas>",
+                            "description": " - drawing place\n - block-element\n - ...",
+                            "examples": "see &lt;canvas&gt; example",
+                            "links": "http://www.w3schools.com/tags/tag_canvas.asp"
+                        },
+                        {
+                            "title": "<code>",
+                            "description": " - code place\n - block-element\n - ...",
+                            "examples": "see &lt;code&gt; example",
+                            "links": "http://www.w3schools.com/tags/tag_code.asp"
+                        },
+                        {
                             "title": "<div>",
-                            "description": " - division\n - block-element\n - used as a container \n\n full write: <div></div>",
+                            "description": "  - division\n  - block-element\n\n The div element has no special meaning at all. It represents its children. It can be used with the class, lang, and title attributes to mark up semantics common to a group of consecutive elements.\n\nfull write: <div></div>",
                             "examples": "&lt;div style=\"background-color: yellow\"&gt;Hi, there! &lt;/div&gt;<hr><div style=\"background-color: yellow\">Hi, there! </div>",
                             "links": "http://www.w3schools.com/tags/tag_div.asp"
                         },
@@ -65,6 +95,12 @@
                             "links": "http://www.w3schools.com/tags/tag_main.asp"
                         },
                         {
+                            "title": "<meta>",
+                            "description": " - meta data\n - ...n",
+                            "examples": "meta example:",
+                            "links": "http://www.w3schools.com/tags/tag_meta.asp"
+                        },
+                        {
                             "title": "<nav>",
                             "description": " - navigation\n - block-element\n - has semantic mean",
                             "examples": "",
@@ -75,6 +111,24 @@
                             "description": " - paragraph of text\n - block-element\n - create new a line after itself\n\n full write: <p></p>",
                             "examples": "&lt;p style=\"background-color: ghostwhite; color: black;\"&gt;Once upon a time... &lt;br&gt; She was so beautiful... &lt;/p&gt;<hr><div style=\"background-color: ghostwhite; color: black;\">Once upon a time... <br>She was so beautiful... </div>",
                             "links": "http://www.w3schools.com/tags/tag_p.asp"
+                        },
+                        {
+                            "title": "<table>",
+                            "description": " - table\n - block-element\n - ...",
+                            "examples": "",
+                            "links": "http://www.w3schools.com/tags/tag_table.asp"
+                        },
+                        {
+                            "title": "<tr>",
+                            "description": " - table row\n - block-element\n - ...",
+                            "examples": "",
+                            "links": "http://www.w3schools.com/tags/tag_tr.asp"
+                        },
+                        {
+                            "title": "<td>",
+                            "description": " - table data\n - block-element\n - ...",
+                            "examples": "",
+                            "links": "http://www.w3schools.com/tags/tag_td.asp"
                         }
                     ],
                     "html-test": [
@@ -118,6 +172,681 @@
                         },
                         {
                             "question": "5. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "6. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "7. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "8. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "9. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "10. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "11. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "12. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "13. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "14. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "15. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "16. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "17. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "18. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "19. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "20. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "21. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "22. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "23. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "24. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "25. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "26. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "27. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "28. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "29. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "30. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "31. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "32. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "33. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "34. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "35. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "36. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "37. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "38. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "39. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "40. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "41. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "42. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "43. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "44. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "45. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "46. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "47. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "48. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "49. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "50. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "51. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "52. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "53. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "54. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "55. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "56. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "57. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "58. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "59. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "60. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "61. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "62. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "63. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "64. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "65. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "66. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "67. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "68. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "69. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "70. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "71. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "72. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "73. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "74. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "75. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "76. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "77. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "78. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "79. Which of the following tags is used  for inserting a line break?",
+                            "answers" :[
+                                "hghjgdfjh",
+                                "hghdfjgjh",
+                                "hgdfhjgjh",
+                                "hghjfgjh"
+                            ]
+                        },
+                        {
+                            "question": "80. Which of the following tags is used  for inserting a line break?",
                             "answers" :[
                                 "hghjgdfjh",
                                 "hghdfjgjh",

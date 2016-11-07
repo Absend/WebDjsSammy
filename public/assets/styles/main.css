@@ -17,6 +17,10 @@ a {
     font-weight: bold
 }
 
+#term-definition {
+    text-align: justify
+}
+
 ul {
     list-style-type: none;
 }
