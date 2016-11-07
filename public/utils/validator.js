@@ -31,36 +31,36 @@ const checkForOtherSymbols = (stringg, chars) => {
 };
 
 const validator = {
-    validateUsername: (username) => {
+    isValidUsername: (username) => {
         if (typeof username !== 'string') {
             notifier.error("Username must be a string!");
+            return false;
         }
 
         if (username.length < constants.username.minLength || username.length > constants.username.maxLength) {
             notifier.error("Username must be between 6 and 30 characters!");
+            return false;
         }
+
+        return true;
     },
-    validatePassword: (pass) => {
+    isValidPassword: (pass) => {
         if (typeof pass !== "string") {
-             notifier.error("Password must be a string!");
+            notifier.error("Password must be a string!");
+            return false;
         }
 
         if (pass.length < constants.password.minLength || pass.length > constants.password.maxLength) {
-             notifier.error("Password must be between 6 and 30 characters!");
+            notifier.error("Password must be between 6 and 30 characters!");
+            return false;
         }
 
         if (!checkForOtherSymbols(pass, constants.password.allowedCharacters)) {
-             notifier.error("Password can contain only Latin letters, digits and the characters _ and .");
-        }
-    },
-    validateMaterial: (material) => {
-        if (typeof material.title !== "string" || typeof material.description !== "string") {
-             notifier.error("Material title and description must be a string!");
+            notifier.error("Password can contain only Latin letters, digits and the characters _ and .");
+            return false;
         }
 
-        if (material.title.length < constants.material.minLength || material.title.length > constants.material.maxLength) {
-             notifier.error("Material must be between 6 and 30 characters!");
-        }
+        return true;
     }
 };
 

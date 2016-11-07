@@ -28,7 +28,10 @@ import {
         this.get("#/main/logout", userCtrl.logout);
 
         this.get("#/main/html", () => {
-            dictionaryCtrl.html("#terms");
+            dictionaryCtrl.htmlTest("#content");
+            $("#dict-btn").on("click", () => {
+                dictionaryCtrl.html("#terms");
+            });
         });
 
         this.get("#/main/term", function () {

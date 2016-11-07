@@ -20,26 +20,32 @@ class UserCtrl {
     register(context) {
         $("#btn-register").on("click", function () {
             let username = $("#tb-username").val();
-            validator.validateUsername(username);
-
             let password = $("#tb-password").val();
-            validator.validatePassword(password);
-
             let passwordConfirm = $("#tb-password-confirm").val();
 
-            if (password === passwordConfirm) {
-                let user = {
-                    username: username,
-                    password: CryptoJS.SHA1(password).toString()
-                };
-                
-                data.register(user);
+            if (validator.isValidUsername(username) && validator.isValidPassword(password)) {
 
-                if (true) {
+                if (password === passwordConfirm) {
+                    let user = {
+                        username: username,
+                        password: CryptoJS.SHA1(password).toString()
+                    };
+
+                    data.register(user);
+
+                    $("#btn-profile").html(username);
+
+                    $("#login").addClass("invisible");
+                    $("#register").addClass("invisible");
+
+                    $("#logout").removeClass("invisible");
+                    $("#profile").removeClass("invisible");
+                    $("#main-menu").removeClass("invisible");
+
                     notifier.success("Register success!");
+                } else {
+                    notifier.error("Password does not match!");
                 }
-            } else {
-                notifier.error("Password does not match!");
             }
         });
 
@@ -53,28 +59,30 @@ class UserCtrl {
 
     login() {
         $("#btn-login").on("click", function () {
-            let username = $("#tb-username-log").val(),
-                password = $("#tb-password-log").val();
-            $("#btn-profile").html(username);
+            let username = $("#tb-username-log").val();
+            let password = $("#tb-password-log").val();
 
-            console.log(username);  
+            if (validator.isValidUsername(username) && validator.isValidPassword(password)) {
+                
+                $("#btn-profile").html(username);
 
-            console.log(username)
-            console.log(password);
+                $("#login").addClass("invisible");
+                $("#register").addClass("invisible");
 
-            $("#login").addClass("invisible");
-            $("#register").addClass("invisible");
-            $("#logout").removeClass("invisible");
-            $("#profile").removeClass("invisible");
-            $("#main-menu").removeClass("invisible");
+                $("#logout").removeClass("invisible");
+                $("#profile").removeClass("invisible");
+                $("#main-menu").removeClass("invisible");
+            }
         });
         //let userStore = JSON.parse(localStorage.getItem("userStorage"));
     }
 
     logout() {
         $("#btn-logout").on("click", function () {
+
             $("#logout").addClass("invisible");
             $("#profile").addClass("invisible");
+
             $("#main-menu").addClass("invisible");
             $("#login").removeClass("invisible");
             $("#register").removeClass("invisible");

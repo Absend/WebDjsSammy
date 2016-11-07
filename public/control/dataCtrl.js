@@ -33,8 +33,17 @@ class DictionaryCtrl {
         this.data
             .then(function (res) {
                 let data = res.db[0].data[0];
-                $("#dictIt").removeClass("invisible");
+                //$("#dictIt").removeClass("invisible");
                 return view.html(selector, data);
+            });
+    }
+
+    htmlTest(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                $("#dictIt").removeClass("invisible");
+                return view.htmlTest(selector, data);
             });
     }
 

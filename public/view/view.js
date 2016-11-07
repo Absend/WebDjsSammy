@@ -30,6 +30,10 @@ class View {
     html(selector, data) {
         loadTemplate(selector, "html-template", data);
     }
+
+    htmlTest(selector, data) {
+        loadTemplate(selector, "html-form", data);
+    }
 }
 
 let view = new View();
