@@ -14,16 +14,16 @@
 			<div class="row">
 				<div class="add-menu dropup">
 					<a href="#/add" class="btn btn-primary col-md-3 btn dropdown-toggle" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">Add</a>
-					<div class="dropdown-menu" style="min-width: 100%; max-width: 100%; min-height: 603px; max-height: 603px; font-size: 28px;">
+					<div class="dropdown-menu" style="min-width: 100%; max-width: 100%; min-height: 420px; max-height: 420px; font-size: 28px;">
 						<label class="add-label" for="tb-title" style="margin-left: 1%"><h5>Title:</h5></label>
 						<input type="text" placeholder="Title of the term..." id="tb-title" class="form-control" style="min-width: 98%; max-width: 98%; margin: 1%">
 						<label class="add-label" for="tb-description" style="margin-left: 1%"v><h5>Description:</h5></label>
-						<textarea type="text" placeholder="Description of the term..." id="tb-description" class="form-control" style="min-width: 98%; max-width: 98%; min-height: 250px; max-height: 250px; margin: 1%"></textarea>
-						<label class="add-label" for="tb-example" style="margin-left: 1%"><h5>Example:</h5></label>
-						<input type="text" placeholder="<div><h1>I'm the main title.</h1></div>" id="tb-example"class="form-control" style="min-width: 98%; max-width: 98%; margin: 1%">
+						<textarea type="text" placeholder="Description of the term..." id="tb-description" class="form-control" style="min-width: 98%; max-width: 98%; min-height: 120px; max-height: 120px; margin: 1%"></textarea>
+						<label class="add-label" for="tb-example" style="margin-left: 1%"><h5>Examples:</h5></label>
+						<input type="url" placeholder="http://pastebin.com" id="tb-example"class="form-control" style="min-width: 98%; max-width: 98%; margin: 1%">
 						<label class="add-label" for="tb-info" style="margin-left: 1%"><h5>More information link:</h5></label>
-						<input type="text" placeholder="http://www.w3schools.com" id="tb-info" class="form-control" style="min-width: 98%; max-width: 98%; margin: 1%">
-						<button class="btn btn-default btn-md" id="btn-add-item">Save</button>
+						<input type="url" placeholder="http://www.w3schools.com" id="tb-info" class="form-control" style="min-width: 98%; max-width: 98%; margin: 1%">
+						<!--<button class="btn btn-default btn-md" id="btn-add-item">Save</button>-->
 					</div>
 					<a href="#" class="btn btn-danger col-md-3">Delete</a>
 					<a href="#" class="btn btn-success col-md-3">Edit</a>
@@ -41,13 +41,13 @@
 				<div class="col-md-6">
 					<textarea id="term-definition" class="text"></textarea>
 				</div>
-				<div class="col-md-6" style="font-size: 22px; color: gray; font-weight: bold;">example:
+				<div class="col-md-6" style="font-size: 22px; color: gray; font-weight: bold;">Examples:
 					<div id="term-examples" class="text"></div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12" style="margin-top: -15px;">
-					<a href="#" id="term-more" class="links" target="_blank">more information</a>
+					<a href="#" id="term-more" class="links" target="_blank">More information</a>
 				</div>
 			</div>
 		</div>

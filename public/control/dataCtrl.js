@@ -48,6 +48,13 @@ class DictionaryCtrl {
                 return view.htmlTest(selector, data);
             });
     }
+    htmlTasks(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.htmlTasks(selector, data);
+            });
+    }
 
     selectElement(currentTerm) {
         return this.data

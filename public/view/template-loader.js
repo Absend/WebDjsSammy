@@ -31,12 +31,20 @@ class View {
         loadTemplate(selector, "dict-template");
     }
 
+    profile(selector, data) {
+        loadTemplate(selector, "profile-template", data);
+    }
+
     html(selector, data) {
         loadTemplate(selector, "html-template", data);
     }
 
     htmlTest(selector, data) {
         loadTemplate(selector, "html-form", data);
+    }
+
+    htmlTasks(selector, data) {
+        loadTemplate(selector, "html-tasks", data);
     }
 }
 

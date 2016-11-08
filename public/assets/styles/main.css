@@ -56,7 +56,7 @@ ul {
 
 main {
     background-color: whitesmoke;
-    min-height: 580px
+    min-height: 460px
 }
 
 .search {
@@ -64,8 +64,8 @@ main {
 }
 
 .items-list {
-    min-height: 550px;
-    max-height: 550px;
+    min-height: 360px;
+    max-height: 360px;
     border: 1px solid darkgrey;
     background-color: ghostwhite;
     margin-top: 11px;
@@ -94,8 +94,8 @@ main {
 .text {
     min-width: 100%;
     max-width: 100%;
-    min-height: 550px;
-    max-height: 550px;
+    min-height: 360px;
+    max-height: 360px;
     font-size: 22px;
     color: steelblue;
 }
@@ -121,7 +121,7 @@ footer {
 
 #dict-container {
     border-bottom: 2px solid black;
-    min-height: 630px
+    min-height: 460px
 }
 
 .add-label {

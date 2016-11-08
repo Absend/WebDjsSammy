@@ -16,6 +16,10 @@ import {
     notifier as notifier
 } from "../utils/notifier.js";
 
+import {
+    dictionaryCtrl as dictionaryCtrl
+} from "./dataCtrl.js";
+
 class UserCtrl {
     register() {
         $("#btn-register").on("click", function () {
@@ -86,10 +90,17 @@ class UserCtrl {
             $("#main-menu").addClass("invisible");
             $("#login").removeClass("invisible");
             $("#register").removeClass("invisible");
+            
+            dictionaryCtrl.main("#content");
 
             console.log('logout');
 
         });
+    }
+
+    profile(selector) {
+        let data = {};
+        view.profile(selector, data)
     }
 }
 

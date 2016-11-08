@@ -25,35 +25,37 @@ import {
 
         this.get("#/main/login", userCtrl.login);
 
-        this.get("#/main/logout", userCtrl.logout);
+        this.get("#/logout", userCtrl.logout);
 
-        this.get("#/main/html", () => {
-            $("#test").removeClass("invisible");
-            $("#tasks").removeClass("invisible");
-            $("#dictIt").removeClass("invisible");
-
-            $("#test-btn").on("click", () => {
-                dictionaryCtrl.htmlTest("#content");
-            });
-            $("#taks-btn").on("click", () => {
-                dictionaryCtrl.html("#terms");
-            });
-            $("#dict-btn").on("click", () => {
-                dictionaryCtrl.html("#terms");
-            });
+        this.get("#/profile", function () {
+            userCtrl.profile("#content");
         });
 
-        this.get("#/main/term", function () {
+        this.get("#/html", () => {
+            // dictionaryCtrl.htmlTest("#content");
+            // dictionaryCtrl.htmlTasks("#content");
+            dictionaryCtrl.html("#terms");
+        });
+
+        this.get("#/test", function () {
+            dictionaryCtrl.htmlTest("#content");
+        });
+
+        this.get("#/tasks", function () {
+            dictionaryCtrl.htmlTasks("#content");
+        });
+
+        this.get("#/dict", function () {
+            dictionaryCtrl.dict("#content");
+        });
+
+        this.get("#/term", function () {
             $(".term-value").on("click", function () {
                 let currentTerm = $(this).html();
                 $("#term-name").html(currentTerm);
 
                 dictionaryCtrl.selectElement(currentTerm);
             });
-        });
-
-        this.get("#/dict", function () {
-            dictionaryCtrl.dict("#content");
         });
     });
 
