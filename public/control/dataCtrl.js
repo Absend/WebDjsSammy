@@ -160,16 +160,50 @@ class DictionaryCtrl {
             });
     }
 
-    selectElement(currentTerm) {
+    selectElement(currentTerm, obj) {
         return this.data
             .then(function (res) {
-                let data = res.db[0].data[0].html;
+                let db = res.db[0].data[0],
+                    data = db.html;
+                switch (obj) {
+                    case "css":
+                        data = db.css; break;
+                    case "bootstrap":
+                        data = db.bootstrap; break;
+                    case "less":
+                        data = db.less; break;
+                    case "sass":
+                        data = db.sass; break;
+                    case "stylus":
+                        data = db.stylus; break;
+                    case "js":
+                        data = db.javascript; break;
+                    case "ts":
+                        data = db.typescript; break;
+                    case "jquery":
+                        data = db.jquery; break;
+                    case "angular":
+                        data = db.angular; break;
+                    case "react":
+                        data = db.react; break;
+                    case "nodejs":
+                        data = db.nodejs; break;
+                    case "express":
+                        data = db.express; break;
+                    case "mongodb":
+                        data = db.mongodb; break;
+                    default:
+                        data = db.html; break;
+                }
+
                 let len = data.length;
 
-                // before: &lt;div&gt;
-                currentTerm = currentTerm.substr(4, currentTerm.length - 8);
-                currentTerm = "<" + currentTerm + ">";
-                // after: <div>
+                if (currentTerm[0] === "&") {
+                    // before: &lt;div&gt;
+                    currentTerm = currentTerm.substr(4, currentTerm.length - 8);
+                    currentTerm = "<" + currentTerm + ">";
+                    // after: <div>
+                }
 
                 for (let i = 0; i < len; i += 1) {
                     if (data[i].title == currentTerm) {

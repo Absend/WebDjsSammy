@@ -8,6 +8,8 @@ import {
     dictionaryCtrl as dictionaryCtrl
 } from "./control/dataCtrl.js";
 
+var obj = "html";
+
 (function () {
     let sammyApp = Sammy(function () {
 
@@ -46,58 +48,72 @@ import {
         this.get("#/html", () => {
             // dictionaryCtrl.htmlTest("#content");
             // dictionaryCtrl.htmlTasks("#content");
+            obj = "html";
             dictionaryCtrl.html("#terms");
         });
 
         this.get("#/css", () => {
+            obj = "css";
             dictionaryCtrl.css("#terms");
         });
 
         this.get("#/bootstrap", () => {
+            obj = "bootstrap";
             dictionaryCtrl.bootstrap("#terms");
         });
 
         this.get("#/less", () => {
+            obj = "less";
             dictionaryCtrl.less("#terms");
         });
 
         this.get("#/sass", () => {
+            obj = "sass";
             dictionaryCtrl.sass("#terms");
         });
 
         this.get("#/stylus", () => {
+            obj = "stylus";
             dictionaryCtrl.stylus("#terms");
         });
 
         this.get("#/javascript", () => {
+            obj = "js";
             dictionaryCtrl.js("#terms");
         });
 
         this.get("#/typescript", () => {
+            obj = "ts";
             dictionaryCtrl.ts("#terms");
         });
 
         this.get("#/jquery", () => {
+            obj = "jquery";
             dictionaryCtrl.jquery("#terms");
         });
 
         this.get("#/angular", () => {
+            obj = "angular";
             dictionaryCtrl.angular("#terms");
         });
 
         this.get("#/react", () => {
+            obj = "react";
             dictionaryCtrl.react("#terms");
         });
 
         this.get("#/nodejs", () => {
+            obj = "nodejs";
             dictionaryCtrl.nodejs("#terms");
         });
 
         this.get("#/express", () => {
+            obj = "express";
             dictionaryCtrl.express("#terms");
         });
 
         this.get("#/mongodb", () => {
+            obj = "mongodb";
             dictionaryCtrl.mongodb("#terms");
         });
 
@@ -106,7 +122,7 @@ import {
                 let currentTerm = $(this).html();
                 $("#term-name").html(currentTerm);
 
-                dictionaryCtrl.selectElement(currentTerm);
+                dictionaryCtrl.selectElement(currentTerm, obj);
             });
         });
     });

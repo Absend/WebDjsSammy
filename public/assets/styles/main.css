@@ -128,3 +128,10 @@ footer {
     margin-bottom: -13px;
     color: steelblue;
 }
+
+.img-nav{
+    width: 30px;
+    height: 30px;
+    margin-left: 25%;
+    display: inline-block;
+}
