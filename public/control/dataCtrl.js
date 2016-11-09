@@ -25,7 +25,7 @@ class DictionaryCtrl {
         return view.footer(selector);
     }
 
-    main(selector){
+    main(selector) {
         return view.main(selector);
     }
 
@@ -38,6 +38,110 @@ class DictionaryCtrl {
             .then(function (res) {
                 let data = res.db[0].data[0];
                 return view.html(selector, data);
+            });
+    }
+
+    css(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.css(selector, data);
+            });
+    }
+
+    bootstrap(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.bootstrap(selector, data);
+            });
+    }
+
+    less(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.less(selector, data);
+            });
+    }
+
+    sass(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.sass(selector, data);
+            });
+    }
+
+    stylus(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.stylus(selector, data);
+            });
+    }
+
+    js(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.js(selector, data);
+            });
+    }
+
+    ts(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.ts(selector, data);
+            });
+    }
+
+    jquery(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.jquery(selector, data);
+            });
+    }
+
+    angular(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.angular(selector, data);
+            });
+    }
+
+    react(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.react(selector, data);
+            });
+    }
+
+    nodejs(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.nodejs(selector, data);
+            });
+    }
+
+    express(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.express(selector, data);
+            });
+    }
+
+    mongodb(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.db[0].data[0];
+                return view.mongodb(selector, data);
             });
     }
 

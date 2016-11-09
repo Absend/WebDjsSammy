@@ -1,3 +1,23 @@
-<div style="padding: 10%">
-    <h2>Profile... Still not implemented!</h2>
+<div style="padding-left: 10%">
+    <script>
+        let username = $("#btn-profile").html();
+        $("#user-name").html(username);
+    </script>
+    <h1>Hi, <strong id="user-name"></strong></h1><br>
+    <h2>Your results:</h2>
+    <h2>Status: <em><b>novice</b> / advanced / pro</em></h2><br>
+    <div class="row">
+        <div class="add-menu dropup">
+            <h3>Test questions:</h3><br>
+            <a href="#/add" class="btn btn-primary col-md-3">Suggest</a>
+            <a href="#" class="btn btn-success col-md-3">Correct</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="add-menu dropup">
+            <h3>Tasks:</h3><br>
+            <a href="#/add" class="btn btn-primary col-md-3">Suggest</a>
+            <a href="#" class="btn btn-success col-md-3">Correct</a>
+        </div>
+    </div>
 </div>

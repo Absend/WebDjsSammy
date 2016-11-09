@@ -12,10 +12,6 @@ class Data {
     getAll() {
         return requester.getJSON(this.url);
     }
-
-    register(user) {
-        return requester.postJSON('api/users', user);
-    }
 }
 
 let data = new Data();

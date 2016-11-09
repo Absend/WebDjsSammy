@@ -1,0 +1,24 @@
+<div style="padding-left: 20px; padding-top: 5px">
+    <img src="{{ logo.html }}" alt="html" width="80px" height="84px">
+    <span><h3 style="display: inline-block">&nbsp;Test&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3></span>
+    <span><h3 id="timer" style="display: inline-block"></h3></span>
+    <script>
+        $('#timer').timer({
+            countdown: true,
+            duration: '60m00s',      // This will start the countdown from 3 mins 40 seconds
+            callback: function() {  // This will execute after the duration has elapsed
+                console.log('Time up!');
+            }
+        });
+    </script>
+    <dl class="items-list" style= "max-width: 70%; padding-left: 5px;">
+        <br>
+        {{#each html-test}}
+            <dt>{{ question }}</dt>
+            {{#each this.answers}}
+                <dd>&nbsp;&nbsp;&nbsp;<input name="{{ ../question }}" type="radio">&nbsp;{{ this }}</dd>
+            {{/each}}<br>
+        {{/each}}          
+        <a href="#" class="btn btn-primary" style="display: block; margin: 0 auto; width: 30%; margin-bottom: 5px">Submit</a>
+    </dl>
+</div>

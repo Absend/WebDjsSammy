@@ -31,12 +31,6 @@ import {
             userCtrl.profile("#content");
         });
 
-        this.get("#/html", () => {
-            // dictionaryCtrl.htmlTest("#content");
-            // dictionaryCtrl.htmlTasks("#content");
-            dictionaryCtrl.html("#terms");
-        });
-
         this.get("#/test", function () {
             dictionaryCtrl.htmlTest("#content");
         });
@@ -47,6 +41,64 @@ import {
 
         this.get("#/dict", function () {
             dictionaryCtrl.dict("#content");
+        });
+
+        this.get("#/html", () => {
+            // dictionaryCtrl.htmlTest("#content");
+            // dictionaryCtrl.htmlTasks("#content");
+            dictionaryCtrl.html("#terms");
+        });
+
+        this.get("#/css", () => {
+            dictionaryCtrl.css("#terms");
+        });
+
+        this.get("#/bootstrap", () => {
+            dictionaryCtrl.bootstrap("#terms");
+        });
+
+        this.get("#/less", () => {
+            dictionaryCtrl.less("#terms");
+        });
+
+        this.get("#/sass", () => {
+            dictionaryCtrl.sass("#terms");
+        });
+
+        this.get("#/stylus", () => {
+            dictionaryCtrl.stylus("#terms");
+        });
+
+        this.get("#/javascript", () => {
+            dictionaryCtrl.js("#terms");
+        });
+
+        this.get("#/typescript", () => {
+            dictionaryCtrl.ts("#terms");
+        });
+
+        this.get("#/jquery", () => {
+            dictionaryCtrl.jquery("#terms");
+        });
+
+        this.get("#/angular", () => {
+            dictionaryCtrl.angular("#terms");
+        });
+
+        this.get("#/react", () => {
+            dictionaryCtrl.react("#terms");
+        });
+
+        this.get("#/nodejs", () => {
+            dictionaryCtrl.nodejs("#terms");
+        });
+
+        this.get("#/express", () => {
+            dictionaryCtrl.express("#terms");
+        });
+
+        this.get("#/mongodb", () => {
+            dictionaryCtrl.mongodb("#terms");
         });
 
         this.get("#/term", function () {
