@@ -27,6 +27,10 @@ class View {
         loadTemplate(selector, "main-template");
     }
 
+    mainLogged(selector, data) {
+        loadTemplate(selector, "main-logged", data);
+    }
+
     // Action
     test(selector) {
         loadTemplate(selector, "test-template");

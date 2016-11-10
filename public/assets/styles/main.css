@@ -135,3 +135,13 @@ footer {
     margin-left: 25%;
     display: inline-block;
 }
+
+.main-logged-obj:hover{
+    border: 1px solid black;
+    margin: 15px
+}
+
+.ctx-obj{
+    display: inline;
+    max-width: 50px
+}

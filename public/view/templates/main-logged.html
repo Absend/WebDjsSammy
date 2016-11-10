@@ -1,0 +1,13 @@
+<div style="max-width: 60%">
+    {{#each logo}}
+    <div style="border: 2px solid black; margin: 2px">
+        {{#if alt}}
+            <img class="main-logged-obj" src="{{ path }}" alt="{{ name }}" style="margin: 5px; width: 12%; height: auto">
+        {{/if}}
+        {{#unless alt}}
+            <img class="main-logged-obj" src="{{ path }}" alt="{{ name }}" style="margin: 5px; width: 10%; height: auto">
+        {{/unless}}
+        <h4 class="ctx-obj">It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</h4>
+    </div>
+    {{/each}}
+</div>

@@ -47,6 +47,7 @@ class UserCtrl {
                     $("#main-menu").removeClass("invisible");
 
                     notifier.success("Register success!");
+                    dictionaryCtrl.mainLogged("#content");
                 } else {
                     notifier.error("Password does not match!");
                 }
@@ -67,7 +68,7 @@ class UserCtrl {
             let password = $("#tb-password-log").val();
 
             if (validator.isValidUsername(username) && validator.isValidPassword(password)) {
-                
+
                 $("#btn-profile").html(username);
 
                 $("#login").addClass("invisible");
@@ -76,6 +77,8 @@ class UserCtrl {
                 $("#logout").removeClass("invisible");
                 $("#profile").removeClass("invisible");
                 $("#main-menu").removeClass("invisible");
+                notifier.success("LogIn success!");
+                dictionaryCtrl.mainLogged("#content");
             }
         });
         //let userStore = JSON.parse(localStorage.getItem("userStorage"));
@@ -90,7 +93,7 @@ class UserCtrl {
             $("#main-menu").addClass("invisible");
             $("#login").removeClass("invisible");
             $("#register").removeClass("invisible");
-            
+
             dictionaryCtrl.main("#content");
 
             console.log('logout');

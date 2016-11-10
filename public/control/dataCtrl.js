@@ -12,6 +12,14 @@ import {
     validator as validator
 } from "../utils/validator.js";
 
+function tagTranslater(tag){
+
+}
+
+function objectChecker(obj){
+    
+}
+
 class DictionaryCtrl {
     constructor() {
         this.data = data.getAll();
@@ -29,6 +37,14 @@ class DictionaryCtrl {
         return view.main(selector);
     }
 
+    mainLogged(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.data[0];
+                return view.mainLogged(selector, data);
+            });
+    }
+
     dict(selector) {
         return view.dict(selector);
     }
@@ -36,7 +52,7 @@ class DictionaryCtrl {
     html(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.html(selector, data);
             });
     }
@@ -44,7 +60,7 @@ class DictionaryCtrl {
     css(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.css(selector, data);
             });
     }
@@ -52,7 +68,7 @@ class DictionaryCtrl {
     bootstrap(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.bootstrap(selector, data);
             });
     }
@@ -60,7 +76,7 @@ class DictionaryCtrl {
     less(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.less(selector, data);
             });
     }
@@ -68,7 +84,7 @@ class DictionaryCtrl {
     sass(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.sass(selector, data);
             });
     }
@@ -76,7 +92,7 @@ class DictionaryCtrl {
     stylus(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.stylus(selector, data);
             });
     }
@@ -84,7 +100,7 @@ class DictionaryCtrl {
     js(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.js(selector, data);
             });
     }
@@ -92,7 +108,7 @@ class DictionaryCtrl {
     ts(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.ts(selector, data);
             });
     }
@@ -100,7 +116,7 @@ class DictionaryCtrl {
     jquery(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.jquery(selector, data);
             });
     }
@@ -108,7 +124,7 @@ class DictionaryCtrl {
     angular(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.angular(selector, data);
             });
     }
@@ -116,7 +132,7 @@ class DictionaryCtrl {
     react(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.react(selector, data);
             });
     }
@@ -124,7 +140,7 @@ class DictionaryCtrl {
     nodejs(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.nodejs(selector, data);
             });
     }
@@ -132,7 +148,7 @@ class DictionaryCtrl {
     express(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.express(selector, data);
             });
     }
@@ -140,7 +156,7 @@ class DictionaryCtrl {
     mongodb(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.mongodb(selector, data);
             });
     }
@@ -148,14 +164,14 @@ class DictionaryCtrl {
     htmlTest(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.htmlTest(selector, data);
             });
     }
     htmlTasks(selector) {
         this.data
             .then(function (res) {
-                let data = res.db[0].data[0];
+                let data = res.data[0];
                 return view.htmlTasks(selector, data);
             });
     }
@@ -163,7 +179,7 @@ class DictionaryCtrl {
     selectElement(currentTerm, obj) {
         return this.data
             .then(function (res) {
-                let db = res.db[0].data[0],
+                let db = res.data[0],
                     data = db.html;
                 switch (obj) {
                     case "css":
