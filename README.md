@@ -1,7 +1,7 @@
 # WebDJs
 SPA application for web development education with JavaScript.
 
-Tests and Dictionary. 
+Tests, tasks and dictionary. 
 - **View side:**
 HTML, CSS, Bootstrap, LESS, SASS, Stylus
 - **Client side:**
