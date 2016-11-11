@@ -30,6 +30,7 @@ class UserCtrl {
             if (validator.isValidUsername(username) && validator.isValidPassword(password)) {
 
                 if (password === passwordConfirm) {
+
                     let user = {
                         username: username,
                         password: CryptoJS.SHA1(password).toString()

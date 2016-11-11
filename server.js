@@ -8,8 +8,12 @@ let app = express();
 let jsonParser = bodyParser.json()
 app.use(jsonParser);
 
-let middleware = express.static("public");
-app.use(middleware);
+let staticMiddleware = express.static("public");
+app.use(staticMiddleware);
+// app.get("/", getHi());
+// function getHi(req, res) {
+//     res.send("Hi!Nodeeeee");
+// }
 
 let port = 3333;
 app.listen(port, function () {

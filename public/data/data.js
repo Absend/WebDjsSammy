@@ -12,6 +12,8 @@ class Data {
     getAll() {
         return requester.getJSON(this.url);
     }
+
+    
 }
 
 let data = new Data();

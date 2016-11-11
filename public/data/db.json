@@ -9,60 +9,66 @@
         {
             "logo": [
                 {
-                    "name": "html",
+                    "name": "html-img",
                     "path": "./assets/images/libs-logos/html.png",
+                    "html":"html"
+                },
+                {
+                    "name": "css-img",
+                    "path": "./assets/images/libs-logos/css.png",
                     "alt": "html"
                 },
                 {
-                    "name": "css",
-                    "path": "./assets/images/libs-logos/css.png"
-                },
-                {
-                    "name": "bootstrap",
+                    "name": "bootstrap-img",
                     "path": "./assets/images/libs-logos/bootstrap.png"
                 },
                 {
-                    "name": "less",
-                    "path": "./assets/images/libs-logos/less.png"
+                    "name": "less-img",
+                    "path": "./assets/images/libs-logos/less.png",
+                    "alt": "html"
                 },
                 {
-                    "name": "sass",
+                    "name": "sass-img",
                     "path": "./assets/images/libs-logos/sass.png"
                 },
                 {
-                    "name": "stylus",
-                    "path": "./assets/images/libs-logos/stylus.png"
+                    "name": "stylus-img",
+                    "path": "./assets/images/libs-logos/stylus.png",
+                    "alt": "html"
                 },
                 {
-                    "name": "js",
+                    "name": "js-img",
                     "path": "./assets/images/libs-logos/js.png"
                 },
                 {
-                    "name": "ts",
+                    "name": "jquery-img",
+                    "path": "./assets/images/libs-logos/jquery.png",
+                    "alt": "html"
+                },
+                {
+                    "name": "ts-img",
                     "path": "./assets/images/libs-logos/ts.png"
                 },
                 {
-                    "name": "jquery",
-                    "path": "./assets/images/libs-logos/jquery.png"
+                    "name": "angular-img",
+                    "path": "./assets/images/libs-logos/angular.png",
+                    "alt": "html"
                 },
                 {
-                    "name": "angular",
-                    "path": "./assets/images/libs-logos/angular.png"
-                },
-                {
-                    "name": "react",
+                    "name": "react-img",
                     "path": "./assets/images/libs-logos/react.png"
                 },
                 {
-                    "name": "nodejs",
-                    "path": "./assets/images/libs-logos/nodejs.png"
+                    "name": "nodejs-img",
+                    "path": "./assets/images/libs-logos/nodejs.png",
+                    "alt": "html"
                 },
                 {
-                    "name": "express",
+                    "name": "express-img",
                     "path": "./assets/images/libs-logos/express.png"
                 },
                 {
-                    "name": "mongodb",
+                    "name": "mongodb-img",
                     "path": "./assets/images/libs-logos/mongodb.png",
                     "alt": "html"
                 }

@@ -56,7 +56,7 @@ ul {
 
 main {
     background-color: whitesmoke;
-    min-height: 460px
+    min-height: 420px
 }
 
 .search {
@@ -110,13 +110,17 @@ main {
 }
 
 footer {
-    min-height: 99px;
+    min-height: 80px;
     background-color: black;
     color: whitesmoke;
     font-size: 22px;
     text-align: center;
     padding: 2%;
     margin-top: -20px
+}
+
+#github:hover {
+    border: 2px solid black
 }
 
 #dict-container {
@@ -129,19 +133,14 @@ footer {
     color: steelblue;
 }
 
-.img-nav{
+.img-nav {
     width: 30px;
     height: 30px;
     margin-left: 25%;
     display: inline-block;
 }
 
-.main-logged-obj:hover{
-    border: 1px solid black;
-    margin: 15px
-}
-
-.ctx-obj{
+.ctx-obj {
     display: inline;
     max-width: 50px
 }
