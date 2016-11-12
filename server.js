@@ -1,17 +1,32 @@
-/* globals require, console */
+let express = require("express"),
+    bodyParser = require("body-parser"),
+    openurl = require("openurl"),
+    low = require("lowdb");
 
-"use strict";
+let db = low("./db/localDb.json");
+db.defaults({ users: [], data: [] }).value();
+db._.mixin(require("underscore-db"));
 
-let dbFactory = require("./db");
+let data = db.get("data").value();
 
-let dataService = require("./data")(dbFactory.getDb());
+let app = express();
 
-const app = require("./config/express")(dataService);
+let jsonParser = bodyParser.json()
+app.use(jsonParser);
 
-require("./routers")(app, dataService);
+let staticMiddleware = express.static("public");
+app.use(staticMiddleware);
 
-let port = require("./config").port;
+app.get("/api/data", (req, res) => {
+    return res.status(200).json({
+        result: data
+    });
+});
 
-app.listen(port, () => console.log(`App running at http://localhost:${port}/`));
+console.log(JSON.parse(data));
 
-require("openurl").open(`http://localhost:${port}/index.html`);
+let port = 3333;
+app.listen(port, function () {
+    openurl.open(`http://localhost:${port}/index.html`);
+    console.log(`Server is running at http://localhost:${port}`);
+});

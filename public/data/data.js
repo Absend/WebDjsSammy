@@ -6,7 +6,7 @@ import {
 
 class Data {
     constructor() {
-        this.url = "./data/db.json";
+        this.url = "./data/db.json"; //"/api/data";  
     }
 
     getAll() {
