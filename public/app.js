@@ -57,9 +57,16 @@ var FocusApp = "test";
             $(".dropdown-btn-view").dropdown("toggle");
             FocusObject = "html";
 
-            // dictionaryCtrl.htmlTest("#content");
-            // dictionaryCtrl.htmlTasks("#content");
-            dictionaryCtrl.html("#terms");
+            switch (FocusApp) {
+                case "test":
+                    dictionaryCtrl.htmlTest("#content"); break;
+                case "tasks":
+                    dictionaryCtrl.htmlTasks("#content");
+                case "dict":
+                    dictionaryCtrl.html("#terms"); break;
+                default:
+                    dictionaryCtrl.htmlTest("#content"); break;
+            }
         });
 
         this.get("#/css", () => {
