@@ -48,6 +48,9 @@ class UserCtrl {
                     $("#main-menu").removeClass("invisible");
 
                     notifier.success("Register success!");
+                    $("#tb-username").val("");
+                    $("#tb-password").val("");
+                    $("#tb-password-confirm").val("")
                     dictionaryCtrl.mainLogged("#content");
                 } else {
                     notifier.error("Password does not match!");
@@ -78,7 +81,10 @@ class UserCtrl {
                 $("#logout").removeClass("invisible");
                 $("#profile").removeClass("invisible");
                 $("#main-menu").removeClass("invisible");
+
                 notifier.success("LogIn success!");
+                $("#tb-username-log").val("");
+                $("#tb-password-log").val("");
                 dictionaryCtrl.mainLogged("#content");
             }
         });

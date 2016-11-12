@@ -11,66 +11,77 @@
                 {
                     "name": "html-img",
                     "path": "./assets/images/libs-logos/html.png",
-                    "html":"html"
+                    "num": "1"
                 },
                 {
                     "name": "css-img",
                     "path": "./assets/images/libs-logos/css.png",
-                    "alt": "html"
+                    "num": "2"
                 },
                 {
                     "name": "bootstrap-img",
-                    "path": "./assets/images/libs-logos/bootstrap.png"
+                    "path": "./assets/images/libs-logos/bootstrap.png",
+                    "num": "3"
                 },
                 {
                     "name": "less-img",
                     "path": "./assets/images/libs-logos/less.png",
-                    "alt": "html"
+                    "num": "4"
                 },
                 {
                     "name": "sass-img",
-                    "path": "./assets/images/libs-logos/sass.png"
+                    "path": "./assets/images/libs-logos/sass.png",
+                    "num": "5"
                 },
                 {
                     "name": "stylus-img",
                     "path": "./assets/images/libs-logos/stylus.png",
-                    "alt": "html"
+                    "num": "6"
                 },
                 {
                     "name": "js-img",
-                    "path": "./assets/images/libs-logos/js.png"
+                    "path": "./assets/images/libs-logos/js.png",
+                    "num": "7"
                 },
                 {
                     "name": "jquery-img",
                     "path": "./assets/images/libs-logos/jquery.png",
-                    "alt": "html"
+                    "num": "8"
                 },
                 {
                     "name": "ts-img",
-                    "path": "./assets/images/libs-logos/ts.png"
+                    "path": "./assets/images/libs-logos/ts.png",
+                    "num": "9"
                 },
                 {
                     "name": "angular-img",
                     "path": "./assets/images/libs-logos/angular.png",
-                    "alt": "html"
+                    "num": "10"
                 },
                 {
                     "name": "react-img",
-                    "path": "./assets/images/libs-logos/react.png"
+                    "path": "./assets/images/libs-logos/react.png",
+                    "num": "11"
                 },
                 {
                     "name": "nodejs-img",
                     "path": "./assets/images/libs-logos/nodejs.png",
-                    "alt": "html"
+                    "num": "12"
                 },
                 {
                     "name": "express-img",
-                    "path": "./assets/images/libs-logos/express.png"
+                    "path": "./assets/images/libs-logos/express.png",
+                    "num": "13"
                 },
                 {
                     "name": "mongodb-img",
                     "path": "./assets/images/libs-logos/mongodb.png",
-                    "alt": "html"
+                    "num": "14"
+                },
+                {
+                    "name": "mongoose-img",
+                    "path": "./assets/images/libs-logos/mongoose.png",
+                    "num": "15"
                 }
             ],
             "html": [
@@ -548,6 +559,26 @@
                 {
                     "title": "mongodb",
                     "description": "1ththttth5",
+                    "examples": "",
+                    "links": ""
+                }
+            ],
+            "mongoose": [
+                {
+                    "title": "mongoose22",
+                    "description": "1Mongssasassh5",
+                    "examples": "",
+                    "links": ""
+                },
+                {
+                    "title": "mongoose2",
+                    "description": "1tmons5",
+                    "examples": "",
+                    "links": ""
+                },
+                {
+                    "title": "mongoose",
+                    "description": "1tsathttth5",
                     "examples": "",
                     "links": ""
                 }

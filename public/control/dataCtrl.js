@@ -12,12 +12,12 @@ import {
     validator as validator
 } from "../utils/validator.js";
 
-function tagTranslater(tag){
+function tagTranslater(tag) {
 
 }
 
-function objectChecker(obj){
-    
+function objectChecker(obj) {
+
 }
 
 class DictionaryCtrl {
@@ -161,6 +161,14 @@ class DictionaryCtrl {
             });
     }
 
+    mongoose(selector) {
+        this.data
+            .then(function (res) {
+                let data = res.data[0];
+                return view.mongoose(selector, data);
+            });
+    }
+
     htmlTest(selector) {
         this.data
             .then(function (res) {
@@ -208,6 +216,8 @@ class DictionaryCtrl {
                         data = db.express; break;
                     case "mongodb":
                         data = db.mongodb; break;
+                    case "mongoose":
+                        data = db.mongoose; break;
                     default:
                         data = db.html; break;
                 }

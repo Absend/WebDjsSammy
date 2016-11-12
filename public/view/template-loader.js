@@ -230,6 +230,19 @@ class View {
     mongodb(selector, data) {
         loadTemplate(selector, "mongodb-template", data);
     }
+
+    // mongoose
+    mongooseTest(selector, data) {
+        loadTemplate(selector, "mongoose-test", data);
+    }
+
+    mongooseTasks(selector, data) {
+        loadTemplate(selector, "mongoose-tasks", data);
+    }
+
+    mongoose(selector, data) {
+        loadTemplate(selector, "mongoose-template", data);
+    }
 }
 
 let view = new View();

@@ -9,6 +9,7 @@ import {
 } from "./control/dataCtrl.js";
 
 var FocusObject = "html";
+var FocusApp = "test";
 
 (function () {
     let sammyApp = Sammy(function () {
@@ -26,22 +27,28 @@ var FocusObject = "html";
         this.get("#/main/register", userCtrl.register);
 
         this.get("#/main/login", userCtrl.login);
+        this.get("#/main-logged", function () {
+            dictionaryCtrl.mainLogged("#content");
+        });
 
         this.get("#/logout", userCtrl.logout);
 
-        this.get("#/profile", function () {
+        this.get("#/profile", () => {
             userCtrl.profile("#content");
         });
 
-        this.get("#/test", function () {
+        this.get("#/test", () => {
+            FocusApp = "test";
             dictionaryCtrl.htmlTest("#content");
         });
 
-        this.get("#/tasks", function () {
+        this.get("#/tasks", () => {
+            FocusApp = "tasks";
             dictionaryCtrl.htmlTasks("#content");
         });
 
-        this.get("#/dict", function () {
+        this.get("#/dict", () => {
+            FocusApp = "dict";
             dictionaryCtrl.dict("#content");
         });
 
@@ -133,7 +140,13 @@ var FocusObject = "html";
             dictionaryCtrl.mongodb("#terms");
         });
 
-        this.get("#/term", function () {
+        this.get("#/mongoose", () => {
+            $(".dropdown-btn-db").dropdown("toggle");
+            FocusObject = "mongoose";
+            dictionaryCtrl.mongoose("#terms");
+        });
+
+        this.get("#/term", () => {
             $(".term-value").on("click", function () {
                 let currentTerm = $(this).html();
                 $("#term-name").html(currentTerm);
@@ -143,7 +156,7 @@ var FocusObject = "html";
         });
     });
 
-    $(function () {
+    $(() => {
         sammyApp.run("#/");
     });
 

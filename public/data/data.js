@@ -13,7 +13,9 @@ class Data {
         return requester.getJSON(this.url);
     }
 
-    
+    register(user){
+        console.log(user);   
+    }
 }
 
 let data = new Data();

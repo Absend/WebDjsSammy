@@ -1,32 +1,72 @@
 <style>
-    .choise-container {
-        border: 2px solid black;
-        display: block;
-        min-height: 80px;
-        text-align: center;
-        padding-top: 15px;
-        margin: 5px;
+    #main-logged-container {
+        background-color: whitesmoke;
+        max-width: 70%;
     }
     
-    .choise-container:hover {
-        background-color: lightgrey;
+    .gallery {
+        display: inline-block;
+    }
+    
+    .gallery .image-container {
+        float: left;
+        width: 250px;
+        height: 200px;
+        margin: 5px;
+        border: 2px solid black;
+    }
+    
+    .gallery .image-container:hover {
+        background-color: lightgray;
+    }
+    
+    .gallery .image-container img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .img-logo {
+        max-width: 70%;
+        max-height: 150px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .gallery-list .image-container {
+        padding-top: 2%;
     }
 </style>
-<div style="max-width: 30%;">
-    {{#each logo}}
-    <div id="{{ name }}" class="choise-container">
-        {{#if html}}
-        <div style="float: right">
-            <img class="main-logged-obj" src="{{ path }}" alt="{{ name }}" style=" width: 13%">
-            <h4 class="ctx-obj">It was popularised in the 1960s.</h4>
+
+<div id="main-logged-container">
+    <div id="root" style="margin-top:50px; margin-left:50px;">
+        <div id="gallery">
+            <div class="gallery-list">
+                {{#each logo}}
+                <div id="{{ name }}" class="image-container">
+                    <img class="img-logo" src="{{ path }}" alt="{{ name }}" data-info="{{ num }}">
+                </div>
+                {{/each}}
+            </div>
         </div>
-        {{else}}
-        {{/if}} {{#unless html}}
-        <div>
-            <img class="main-logged-obj" src="{{ path }}" alt="{{ name }}" style="width: 10%">
-            <h4 class="ctx-obj">It was popularised in the 1960s.</h4>
-        </div>
-        {{/unless}}
     </div>
-    {{/each}}
 </div>
+<script>
+    $.fn.gallery = function (columnsPerRow) {
+        columnsPerRow = columnsPerRow || 3;
+
+        var $this = $(this);
+        var $galleryList = $this.children(".gallery-list ");
+
+        $galleryList.on("click", "img", function () {
+            
+        });
+
+        $this.addClass("gallery");
+
+        return this;
+    };
+
+    $(function () {
+        $("#gallery").gallery(3);
+    });
+</script>
