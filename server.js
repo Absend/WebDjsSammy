@@ -1,13 +1,11 @@
 let express = require("express"),
     bodyParser = require("body-parser"),
-    openurl = require("openurl"),
-    low = require("lowdb");
+    low = require("lowdb"),
+    openurl = require("openurl");
 
 let db = low("./db/localDb.json");
 db.defaults({ users: [], data: [] }).value();
 db._.mixin(require("underscore-db"));
-
-let data = db.get("data").value();
 
 let app = express();
 
@@ -17,13 +15,12 @@ app.use(jsonParser);
 let staticMiddleware = express.static("public");
 app.use(staticMiddleware);
 
-app.get("/api/data", (req, res) => {
-    return res.status(200).json({
+let data = db.get("data").value();
+app.get("/api/data", (req, res, next) => {
+    return res.json({
         result: data
     });
 });
-
-console.log(JSON.parse(data));
 
 let port = 3333;
 app.listen(port, function () {
