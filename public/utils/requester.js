@@ -1,60 +1,48 @@
 "use strict";
 
+function sendAjax(method, url, options) {
+    options = options || {};
+
+    let headers = options.headers || {},
+        data = options.data || undefined;
+
+    let promise = new Promise((resolve, reject) => {
+        $.ajax(url, {
+            method,
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            headers,
+            success: function (response) {
+                resolve(response);
+            },
+            error: function (err) {
+                reject(err);
+            }
+        });
+    });
+
+    return promise;
+}
+
 let ajaxRequester = {
-    putJSON: (url, body, options = {}) => {
-        let promise = new Promise((resolve, reject) => {
-            var headers = options.headers || {};
-            $.ajax({
-                url,
-                headers,
-                method: "PUT",
-                contentType: "application/json",
-                data: JSON.stringify(body),
-                success: (response) => {
-                    resolve(response);
-                }
-            });
-        });
-        return promise;
+
+    get: (url, options) => {
+        return sendAjax("GET", url, options);
     },
-    postJSON: (url, body, options = {}) => {
-        let promise = new Promise((resolve, reject) => {
-            var headers = options.headers || {};
 
-            $.ajax({
-                url,
-                headers,
-                method: "POST",
-                contentType: "application/json",
-                data: JSON.stringify(body),
-                success: (response) => {
-                    resolve(response);
-                },
-                error: (er) => {
-                    // ugly fix
-                   ajaxRequester.putJSON(url, body, options);
-                }
-            });
-        });
-
-        return promise;
+    post: (url, options) => {
+        return sendAjax("POST", url, options);
     },
-    getJSON: (url, options = {}) => {
-        var headers = options.headers || {};
 
-        let promise = new Promise((resolve, reject) => {
-            $.ajax({
-                url,
-                headers,
-                method: "GET",
-                contentType: "application/json",
-                success: (response) => {
-                    resolve(response);
-                }
-            });
-        });
-        return promise;
+    put: (url, options) => {
+        return sendAjax("PUT", url, options);
+    },
+
+    del: (url, options) => {
+        return sendAjax("POST", url, options);
     }
-};
+}
 
-export { ajaxRequester }
+export {
+    ajaxRequester
+};

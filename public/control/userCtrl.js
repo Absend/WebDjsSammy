@@ -20,6 +20,20 @@ import {
     dictionaryCtrl as dictionaryCtrl
 } from "./dataCtrl.js";
 
+function allStorage() {
+    let userObjs = [];
+    let passObjs = [];
+    for (let i = 0; i < localStorage.length; i += 1) {
+        userObjs.push(localStorage.key(i));
+        passObjs.push(localStorage.getItem(localStorage.key(i)));
+    }
+
+    return {
+        "usersData": userObjs,
+        "passesData": passObjs
+    };
+};
+
 class UserCtrl {
     register() {
         $("#btn-register").on("click", function () {
@@ -27,43 +41,46 @@ class UserCtrl {
             let password = $("#tb-password").val();
             let passwordConfirm = $("#tb-password-confirm").val();
 
-            if (validator.isValidUsername(username) && validator.isValidPassword(password)) {
+            if (validator.isValidUsername(username)) {
+                let userIndex = allStorage().usersData.indexOf(username);
+                if (userIndex === -1) {
+                    if (validator.isValidPassword(password)) {
+                        if (password === passwordConfirm) {
+                            let user = {
+                                username: username,
+                                password: CryptoJS.SHA1(password).toString(),
+                                tests: [],
+                                tasks: []
+                            };
 
-                if (password === passwordConfirm) {
+                            localStorage.setItem(user.username, CryptoJS.SHA1(user.password).toString());
+                            data.register(user);
 
-                    let user = {
-                        username: username,
-                        password: CryptoJS.SHA1(password).toString()
-                    };
+                            // UI
+                            $("#btn-profile").html(username);
 
-                    data.register(user);
+                            $("#login").addClass("invisible");
+                            $("#register").addClass("invisible");
 
-                    $("#btn-profile").html(username);
+                            $("#logout").removeClass("invisible");
+                            $("#profile").removeClass("invisible");
+                            $("#main-menu").removeClass("invisible");
 
-                    $("#login").addClass("invisible");
-                    $("#register").addClass("invisible");
-
-                    $("#logout").removeClass("invisible");
-                    $("#profile").removeClass("invisible");
-                    $("#main-menu").removeClass("invisible");
-
-                    notifier.success("Register success!");
-                    $("#tb-username").val("");
-                    $("#tb-password").val("");
-                    $("#tb-password-confirm").val("")
-                    dictionaryCtrl.mainLogged("#content");
-                } else {
-                    notifier.error("Password does not match!");
+                            notifier.success("Register success!");
+                            $("#tb-username").val("");
+                            $("#tb-password").val("");
+                            $("#tb-password-confirm").val("")
+                            dictionaryCtrl.mainLogged("#content");
+                        } else {
+                            notifier.error("Password does not match!");
+                        }
+                    }
+                }
+                else {
+                    notifier.success("Username exists! Please, choose anotherone!");
                 }
             }
         });
-
-        // let user = {
-        //     username: username,
-        //     password: password
-        // };
-
-        // localStorage.setItem("userStorage", JSON.stringify(user));
     }
 
     login() {
@@ -72,23 +89,32 @@ class UserCtrl {
             let password = $("#tb-password-log").val();
 
             if (validator.isValidUsername(username) && validator.isValidPassword(password)) {
+                let userIndex = allStorage().usersData.indexOf(username);
+                if (userIndex !== -1) {
+                    if (allStorage().passesData[userIndex] === CryptoJS.SHA1(CryptoJS.SHA1(password).toString()).toString()) {
+                        $("#btn-profile").html(username);
 
-                $("#btn-profile").html(username);
+                        $("#login").addClass("invisible");
+                        $("#register").addClass("invisible");
 
-                $("#login").addClass("invisible");
-                $("#register").addClass("invisible");
+                        $("#logout").removeClass("invisible");
+                        $("#profile").removeClass("invisible");
+                        $("#main-menu").removeClass("invisible");
 
-                $("#logout").removeClass("invisible");
-                $("#profile").removeClass("invisible");
-                $("#main-menu").removeClass("invisible");
-
-                notifier.success("LogIn success!");
-                $("#tb-username-log").val("");
-                $("#tb-password-log").val("");
-                dictionaryCtrl.mainLogged("#content");
+                        notifier.success("LogIn success!");
+                        $("#tb-username-log").val("");
+                        $("#tb-password-log").val("");
+                        dictionaryCtrl.mainLogged("#content");
+                    }
+                    else {
+                        notifier.error("Password does not match!");
+                    }
+                }
+                else {
+                    notifier.error("Username does not exist! Please, register!");
+                }
             }
         });
-        //let userStore = JSON.parse(localStorage.getItem("userStorage"));
     }
 
     logout() {
@@ -102,9 +128,6 @@ class UserCtrl {
             $("#register").removeClass("invisible");
 
             dictionaryCtrl.main("#content");
-
-            console.log('logout');
-
         });
     }
 

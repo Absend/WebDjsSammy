@@ -5,16 +5,19 @@ import {
 } from "../utils/requester.js";
 
 class Data {
-    constructor() {
-        this.url = "/api/data"; 
+    getData() {
+        return requester.get("/api/data");
     }
 
-    getAll() {
-        return requester.getJSON(this.url);
+    getUsers() {
+        return requester.get("/api/users");
     }
 
     register(user){
-        console.log(user);   
+        let options = {
+            data: user
+        };
+        return requester.post("/api/newUser", options); 
     }
 }
 

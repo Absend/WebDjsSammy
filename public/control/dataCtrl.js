@@ -22,7 +22,7 @@ function objectChecker(obj) {
 
 class DictionaryCtrl {
     constructor() {
-        this.data = data.getAll();
+        this.data = data.getData();
     }
 
     nav(selector) {
