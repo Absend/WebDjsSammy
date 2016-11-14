@@ -20,7 +20,7 @@ import {
     dictionaryCtrl as dictionaryCtrl
 } from "./dataCtrl.js";
 
-function allStorage() {
+function allLocalStorage() {
     let userObjs = [];
     let passObjs = [];
     for (let i = 0; i < localStorage.length; i += 1) {
@@ -33,6 +33,28 @@ function allStorage() {
         "passesData": passObjs
     };
 };
+function setCookie(name, value, expires, path, domain) {
+    let cookie = name + "=" + escape(value) + ";";
+
+    if (expires) {
+        // If it's a date
+        if (expires instanceof Date) {
+            // If it isn't a valid date
+            if (isNaN(expires.getTime()))
+                expires = new Date();
+        }
+        else
+            expires = new Date(new Date().getTime() + parseInt(expires) * 1000 * 60 * 60 * 24);
+
+        cookie += "expires=" + expires.toGMTString() + ";";
+    }
+    if (path)
+        cookie += "path=" + path + ";";
+    if (domain)
+        cookie += "domain=" + domain + ";";
+
+    document.cookie = cookie;
+}
 
 class UserCtrl {
     register() {
@@ -42,7 +64,6 @@ class UserCtrl {
             let passwordConfirm = $("#tb-password-confirm").val();
 
             if (validator.isValidUsername(username)) {
-                //let userIndex = allStorage().usersData.indexOf(username);
                 data.getUsers().then((res) => {
                     let usernames = [];
                     let len = res.result.length,
@@ -50,6 +71,7 @@ class UserCtrl {
                     for (i = 0; i < len; i += 1) {
                         usernames.push(res.result[i].username);
                     }
+
                     let userIndex = usernames.indexOf(username);
                     if (userIndex === -1) {
                         if (validator.isValidPassword(password)) {
@@ -61,8 +83,11 @@ class UserCtrl {
                                     tasks: []
                                 };
 
-                                localStorage.setItem(user.username, CryptoJS.SHA1(user.password).toString());
                                 data.register(user);
+                                notifier.success("Register success!");
+
+                                setCookie("username", username, 30);
+                                localStorage.setItem(user.username, CryptoJS.SHA1(user.password).toString());
 
                                 // UI
                                 $("#btn-profile").html(username);
@@ -74,10 +99,10 @@ class UserCtrl {
                                 $("#profile").removeClass("invisible");
                                 $("#main-menu").removeClass("invisible");
 
-                                notifier.success("Register success!");
                                 $("#tb-username").val("");
                                 $("#tb-password").val("");
                                 $("#tb-password-confirm").val("")
+
                                 dictionaryCtrl.mainLogged("#content");
                             } else {
                                 notifier.error("Password does not match!");
@@ -96,7 +121,6 @@ class UserCtrl {
         $("#btn-login").on("click", function () {
             let username = $("#tb-username-log").val();
             if (validator.isValidUsername(username)) {
-                //let userIndex = allStorage().usersData.indexOf(username);
                 data.getUsers().then((res) => {
                     let usernames = [];
                     let len = res.result.length,
@@ -104,11 +128,16 @@ class UserCtrl {
                     for (i = 0; i < len; i += 1) {
                         usernames.push(res.result[i].username);
                     }
+
                     let userIndex = usernames.indexOf(username);
                     if (userIndex !== -1) {
                         let password = $("#tb-password-log").val();
                         if (validator.isValidPassword(password)) {
                             if (res.result[userIndex].password === CryptoJS.SHA1(password).toString()) {
+
+                                notifier.success("LogIn success!");
+                                setCookie("username", username, 30);
+
                                 $("#btn-profile").html(username);
 
                                 $("#login").addClass("invisible");
@@ -118,9 +147,9 @@ class UserCtrl {
                                 $("#profile").removeClass("invisible");
                                 $("#main-menu").removeClass("invisible");
 
-                                notifier.success("LogIn success!");
                                 $("#tb-username-log").val("");
                                 $("#tb-password-log").val("");
+
                                 dictionaryCtrl.mainLogged("#content");
                             }
                             else {
@@ -138,7 +167,8 @@ class UserCtrl {
 
     logout() {
         $("#btn-logout").on("click", function () {
-
+            
+            $("#btn-profile").html("");
             $("#logout").addClass("invisible");
             $("#profile").addClass("invisible");
 

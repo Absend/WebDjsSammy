@@ -10,6 +10,30 @@ import {
 
 var FocusObject = "html";
 var FocusApp = "test";
+var Logged = false;
+
+// function getCookie(name) {
+//     let regexp = new RegExp("(?:^" + name + "|;\s*" + name + ")=(.*?)(?:;|$)", "g");
+//     let result = regexp.exec(document.cookie);
+//     return (result === null) ? null : result[1];
+// }
+function getCookie(cname) {
+    let name = cname + "=";
+    let cookieArray = document.cookie.split(";");
+
+    for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i];
+        while (cookie.charAt(0) == " ") {
+            cookie = cookie.substring(1);
+        }
+
+        if (cookie.indexOf(name) == 0) {
+            return cookie.substring(name.length, cookie.length);
+        }
+    }
+
+    return "";
+}
 
 (function () {
     let sammyApp = Sammy(function () {
@@ -21,7 +45,26 @@ var FocusApp = "test";
         this.get("#/main", function () {
             dictionaryCtrl.nav("#header");
             dictionaryCtrl.main("#content");
-            dictionaryCtrl.footer("#footer");
+            dictionaryCtrl.footer("#footer")
+
+            let user = getCookie("username");
+            if (user != "") {
+                $("main").on("click", () => {
+                    if ($("#btn-profile").html() === "") {
+                        $("#btn-profile").html(user);
+
+                        $("#login").addClass("invisible");
+                        $("#register").addClass("invisible");
+
+                        $("#logout").removeClass("invisible");
+                        $("#profile").removeClass("invisible");
+                        $("#main-menu").removeClass("invisible");
+                        Logged = true;
+
+                        this.redirect("#/main-logged");
+                    }
+                });
+            }
         });
 
         this.get("#/main/register", userCtrl.register);
