@@ -1,7 +1,60 @@
 {
   "users": [
     {
-      
+      "username": "Tim",
+      "password": "dd5fef9c1c1da1394d6d34b248c51be2ad740840",
+      "tests": [],
+      "tasks": [],
+      "id": "a78b5553-5c5f-4a58-83fc-8ae188358dcf"
+    },
+    {
+      "username": "absend",
+      "password": "7c4a8d09ca3762af61e59520943dc26494f8941b",
+      "tests": [],
+      "tasks": [],
+      "id": "177f7d1a-4f25-4df2-885c-ace1c538cdef"
+    },
+    {
+      "username": "Kik",
+      "password": "b1b3773a05c0ed0176787a4f1574ff0075f7521e",
+      "tests": [],
+      "tasks": [],
+      "id": "402c4cae-9172-4638-9771-56e6fadb0cda"
+    },
+    {
+      "username": "absend",
+      "password": "7c4a8d09ca3762af61e59520943dc26494f8941b",
+      "tests": [],
+      "tasks": [],
+      "id": "1c9e86f3-41b2-40d3-9e38-314868c00a87"
+    },
+    {
+      "username": "Mik",
+      "password": "1c29cf0ceb89afce131e27b76c18af1e9cf7f5e3",
+      "tests": [],
+      "tasks": [],
+      "id": "727ed42d-594d-4499-bf64-a596ad907a16"
+    },
+    {
+      "username": "jojo",
+      "password": "dd5fef9c1c1da1394d6d34b248c51be2ad740840",
+      "tests": [],
+      "tasks": [],
+      "id": "57a02b5f-4fd2-48ed-a004-b319afb65da0"
+    },
+    {
+      "username": "GObl",
+      "password": "707532e6308581abf7fcb693396cde3e2474a69d",
+      "tests": [],
+      "tasks": [],
+      "id": "de6fb539-5b8f-413c-a983-471bb0f9f0a0"
+    },
+    {
+      "username": "Mimi",
+      "password": "b1850817e3b41b683b17fe7dde1e5dbdb3d80070",
+      "tests": [],
+      "tasks": [],
+      "id": "8f42acbd-e718-40c7-a1d7-11574033277f"
     }
   ],
   "data": [

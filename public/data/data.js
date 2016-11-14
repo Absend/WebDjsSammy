@@ -13,11 +13,11 @@ class Data {
         return requester.get("/api/users");
     }
 
-    register(user){
+    register(user) {
         let options = {
             data: user
         };
-        return requester.post("/api/newUser", options); 
+        return requester.post("/api/newUser", options);
     }
 }
 

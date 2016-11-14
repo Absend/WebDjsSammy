@@ -22,18 +22,19 @@ app
     .get("/api/data", (req, res) => {
         return res.json({
             result: data
-        }); 
+        });
     })
     .get("/api/users", (req, res) => {
         return res.json({
             result: users
         });
     })
-    .post("/api/newUser", (req, res)=>{
+    .post("/api/newUser", (req, res) => {
+        res.send(200, "OK");
         let user = req.body;
         db.get("users")
             .insert(user)
-            .value().status(200);
+            .value();
     });
 
 let port = 3333;

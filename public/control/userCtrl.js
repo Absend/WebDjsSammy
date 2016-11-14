@@ -42,43 +42,52 @@ class UserCtrl {
             let passwordConfirm = $("#tb-password-confirm").val();
 
             if (validator.isValidUsername(username)) {
-                let userIndex = allStorage().usersData.indexOf(username);
-                if (userIndex === -1) {
-                    if (validator.isValidPassword(password)) {
-                        if (password === passwordConfirm) {
-                            let user = {
-                                username: username,
-                                password: CryptoJS.SHA1(password).toString(),
-                                tests: [],
-                                tasks: []
-                            };
+                //let userIndex = allStorage().usersData.indexOf(username);
+                data.getUsers().then((res) => {
+                    let usernames = [];
+                    let len = res.result.length,
+                        i;
+                    for (i = 0; i < len; i += 1) {
+                        usernames.push(res.result[i].username);
+                    }
+                    let userIndex = usernames.indexOf(username);
+                    if (userIndex === -1) {
+                        if (validator.isValidPassword(password)) {
+                            if (password === passwordConfirm) {
+                                let user = {
+                                    username: username,
+                                    password: CryptoJS.SHA1(password).toString(),
+                                    tests: [],
+                                    tasks: []
+                                };
 
-                            localStorage.setItem(user.username, CryptoJS.SHA1(user.password).toString());
-                            data.register(user);
+                                localStorage.setItem(user.username, CryptoJS.SHA1(user.password).toString());
+                                data.register(user);
 
-                            // UI
-                            $("#btn-profile").html(username);
+                                // UI
+                                $("#btn-profile").html(username);
 
-                            $("#login").addClass("invisible");
-                            $("#register").addClass("invisible");
+                                $("#login").addClass("invisible");
+                                $("#register").addClass("invisible");
 
-                            $("#logout").removeClass("invisible");
-                            $("#profile").removeClass("invisible");
-                            $("#main-menu").removeClass("invisible");
+                                $("#logout").removeClass("invisible");
+                                $("#profile").removeClass("invisible");
+                                $("#main-menu").removeClass("invisible");
 
-                            notifier.success("Register success!");
-                            $("#tb-username").val("");
-                            $("#tb-password").val("");
-                            $("#tb-password-confirm").val("")
-                            dictionaryCtrl.mainLogged("#content");
-                        } else {
-                            notifier.error("Password does not match!");
+                                notifier.success("Register success!");
+                                $("#tb-username").val("");
+                                $("#tb-password").val("");
+                                $("#tb-password-confirm").val("")
+                                dictionaryCtrl.mainLogged("#content");
+                            } else {
+                                notifier.error("Password does not match!");
+                            }
                         }
                     }
-                }
-                else {
-                    notifier.success("Username exists! Please, choose anotherone!");
-                }
+                    else {
+                        notifier.error("Username exists! Please, choose another one!");
+                    }
+                });
             }
         });
     }
@@ -86,33 +95,43 @@ class UserCtrl {
     login() {
         $("#btn-login").on("click", function () {
             let username = $("#tb-username-log").val();
-            let password = $("#tb-password-log").val();
+            if (validator.isValidUsername(username)) {
+                //let userIndex = allStorage().usersData.indexOf(username);
+                data.getUsers().then((res) => {
+                    let usernames = [];
+                    let len = res.result.length,
+                        i;
+                    for (i = 0; i < len; i += 1) {
+                        usernames.push(res.result[i].username);
+                    }
+                    let userIndex = usernames.indexOf(username);
+                    if (userIndex !== -1) {
+                        let password = $("#tb-password-log").val();
+                        if (validator.isValidPassword(password)) {
+                            if (res.result[userIndex].password === CryptoJS.SHA1(password).toString()) {
+                                $("#btn-profile").html(username);
 
-            if (validator.isValidUsername(username) && validator.isValidPassword(password)) {
-                let userIndex = allStorage().usersData.indexOf(username);
-                if (userIndex !== -1) {
-                    if (allStorage().passesData[userIndex] === CryptoJS.SHA1(CryptoJS.SHA1(password).toString()).toString()) {
-                        $("#btn-profile").html(username);
+                                $("#login").addClass("invisible");
+                                $("#register").addClass("invisible");
 
-                        $("#login").addClass("invisible");
-                        $("#register").addClass("invisible");
+                                $("#logout").removeClass("invisible");
+                                $("#profile").removeClass("invisible");
+                                $("#main-menu").removeClass("invisible");
 
-                        $("#logout").removeClass("invisible");
-                        $("#profile").removeClass("invisible");
-                        $("#main-menu").removeClass("invisible");
-
-                        notifier.success("LogIn success!");
-                        $("#tb-username-log").val("");
-                        $("#tb-password-log").val("");
-                        dictionaryCtrl.mainLogged("#content");
+                                notifier.success("LogIn success!");
+                                $("#tb-username-log").val("");
+                                $("#tb-password-log").val("");
+                                dictionaryCtrl.mainLogged("#content");
+                            }
+                            else {
+                                notifier.error("Password does not match!");
+                            }
+                        }
                     }
                     else {
-                        notifier.error("Password does not match!");
+                        notifier.error("Username does not exist! Please, register!");
                     }
-                }
-                else {
-                    notifier.error("Username does not exist! Please, register!");
-                }
+                });
             }
         });
     }
