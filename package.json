@@ -27,6 +27,8 @@
     "express-list-routes": "^0.1.4",
     "lodash": "^4.16.6",
     "lowdb": "^0.14.0",
+    "mongodb": "^2.2.11",
+    "mongoose": "^4.6.8",
     "openurl": "^1.1.1",
     "underscore-db": "^0.12.0"
   }

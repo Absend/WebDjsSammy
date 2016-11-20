@@ -42,8 +42,10 @@
         <div id="gallery">
             <div class="gallery-list">
                 {{#each logo}}
-                <div id="{{ name }}" class="image-container">
-                    <img class="img-logo" src="{{ path }}" alt="{{ name }}" data-info="{{ num }}">
+                <div class="image-container">
+                    <a href="#/{{ name }}">
+                        <img class="img-logo" src="{{ path }}" alt="{{ name }}" data-info="{{ num }}">
+                    </a>
                 </div>
                 {{/each}}
             </div>
